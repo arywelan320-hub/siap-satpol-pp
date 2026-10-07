@@ -1,0 +1,3 @@
+window.SIAP_CONFIG = {
+  GOOGLE_SHEET_WEBAPP_URL: ""
+};
