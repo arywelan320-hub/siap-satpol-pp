@@ -1792,3 +1792,95 @@ img,svg,video,canvas{max-width:100%}
   }
 }
 /* ===== END MOBILE HERO SCALE FIX v1.14.1 ===== */
+
+
+/* ===== TENTANG AKTUALISASI SELARAS RANCANGAN v1.15 ===== */
+.actual-v115{max-width:980px!important}
+.actual-title-v115{
+  padding:22px 23px;margin-bottom:13px;border-radius:18px;
+  background:linear-gradient(135deg,#0B3F6B,#0E6598);color:#fff;
+  box-shadow:0 11px 27px rgba(11,63,107,.13)
+}
+.actual-title-v115>span,.actual-core-v115>span,.actual-idea-v115>span{
+  display:block;margin-bottom:7px;font-size:9px;font-weight:950;letter-spacing:1.5px
+}
+.actual-title-v115>span{color:#FFD45A}
+.actual-title-v115 h2{margin:0;font-size:25px;line-height:1.28;color:#fff}
+.actual-core-grid-v115{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:12px}
+.actual-core-v115{padding:17px;border:1px solid #D7E3EA;border-radius:15px;background:#fff}
+.actual-core-v115.issue{border-left:5px solid #1976D2}
+.actual-core-v115.cause{border-left:5px solid #E4A500}
+.actual-core-v115>span{color:#667F90}
+.actual-core-v115 h3{margin:0 0 7px;color:#173A52;font-size:16px;line-height:1.4}
+.actual-core-v115 p{margin:0!important;color:#718493!important;font-size:11px!important;line-height:1.5!important}
+.actual-idea-v115{
+  padding:18px 20px;margin-bottom:20px;border-radius:16px;
+  background:#FFF8E4;border:1px solid #ECD58B
+}
+.actual-idea-v115>span{color:#8B6500}
+.actual-idea-v115 h2{margin:0 0 7px;color:#4E4020;font-size:20px;line-height:1.32}
+.actual-idea-v115 p{margin:0!important;color:#6A5C3B!important;line-height:1.55!important}
+.actual-structure-v115{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:24px}
+.actual-structure-v115 article{
+  display:grid;grid-template-columns:36px 1fr;gap:9px;align-items:center;
+  min-height:64px;padding:11px 12px;border:1px solid #D8E3EA;border-radius:13px;background:#fff
+}
+.actual-structure-v115 article b{
+  width:34px;height:34px;display:grid;place-items:center;border-radius:10px;
+  background:#EAF4FA;color:#0D6598
+}
+.actual-structure-v115 article span{color:#26485F;font-size:12px;font-weight:850;line-height:1.3}
+
+.actual-activities-v115{display:grid;gap:9px;margin-bottom:25px}
+.actual-activity-v115{
+  overflow:hidden;border:1px solid #D7E3EA;border-radius:14px;background:#fff;
+  box-shadow:0 4px 13px rgba(18,54,83,.045)
+}
+.actual-activity-v115 summary{
+  list-style:none;display:grid;grid-template-columns:42px minmax(0,1fr) 22px;gap:11px;
+  align-items:center;padding:12px 13px;cursor:pointer
+}
+.actual-activity-v115 summary::-webkit-details-marker{display:none}
+.actual-activity-v115 summary>span{
+  width:40px;height:40px;display:grid;place-items:center;border-radius:11px;
+  background:#0F5F93;color:#fff;font-size:11px;font-weight:950
+}
+.actual-activity-v115 summary b{display:block;color:#163A52;font-size:13px;line-height:1.3}
+.actual-activity-v115 summary small{display:block;margin-top:3px;color:#7B8E9A;font-size:9px}
+.actual-activity-v115 summary i{font-style:normal;color:#678092;font-size:18px;transition:.18s}
+.actual-activity-v115[open] summary{background:#F5FAFD;border-bottom:1px solid #E1E9EE}
+.actual-activity-v115[open] summary i{transform:rotate(180deg)}
+.actual-activity-body-v115{padding:13px 16px 15px}
+.actual-activity-body-v115 h4{margin:2px 0 7px;color:#0F5F93;font-size:11px;letter-spacing:.4px}
+.actual-activity-body-v115 ol,.actual-activity-body-v115 ul{margin:0 0 13px;padding-left:20px}
+.actual-activity-body-v115 li{margin:5px 0;color:#536D7F;font-size:11px;line-height:1.5}
+
+.stakeholder-v115 article{position:relative}
+.stakeholder-v115 em{
+  display:block;margin-top:8px;color:#0F669B;font-size:9px;font-style:normal;font-weight:850
+}
+.actual-source-note-v115{
+  display:grid;gap:4px;margin-top:20px;padding:13px 15px;border-radius:12px;
+  border:1px solid #D6E2E9;background:#F7FAFC;color:#687E8D
+}
+.actual-source-note-v115 b{color:#234A63;font-size:11px}
+.actual-source-note-v115 span{font-size:9.5px;line-height:1.45}
+
+@media(max-width:700px){
+  .actual-title-v115{padding:17px}
+  .actual-title-v115 h2{font-size:20px}
+  .actual-core-grid-v115{grid-template-columns:1fr}
+  .actual-structure-v115{grid-template-columns:1fr 1fr}
+  .actual-activity-v115 summary{grid-template-columns:40px minmax(0,1fr) 20px;padding:10px}
+}
+@media(max-width:430px){
+  .actual-title-v115 h2{font-size:17px}
+  .actual-core-v115 h3{font-size:13px}
+  .actual-idea-v115 h2{font-size:15px}
+  .actual-structure-v115{grid-template-columns:1fr}
+  .actual-activity-v115 summary b{font-size:11px}
+  .actual-activity-v115 summary small{font-size:8px}
+  .actual-activity-body-v115{padding:11px 12px 13px}
+  .actual-activity-body-v115 li{font-size:10px}
+}
+/* ===== END TENTANG AKTUALISASI v1.15 ===== */
