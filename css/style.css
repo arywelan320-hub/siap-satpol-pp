@@ -1735,3 +1735,60 @@ img,svg,video,canvas{max-width:100%}
 }
 /* ===== END AUDIT MOBILE 360-430 v1.13 ===== */
 
+
+
+/* ===== MOBILE HERO SCALE FIX v1.14.1 ===== */
+.hero-mobile-photo{display:none}
+
+@media(max-width:430px){
+  .hero{
+    display:block!important;
+    min-height:0!important;
+    padding:0 0 24px!important;
+    background:
+      linear-gradient(180deg,#0A426D 0%,#073658 100%)!important;
+    overflow:hidden!important;
+  }
+  .hero-mobile-photo{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-width:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+  }
+  .hero-inner{
+    width:100%!important;
+    max-width:none!important;
+    padding:20px 16px 0!important;
+  }
+  .hero .eyebrow{
+    font-size:9px!important;
+    letter-spacing:2px!important;
+    margin:0 0 8px!important;
+  }
+  .hero h1{
+    margin:0 0 8px!important;
+    font-size:34px!important;
+    line-height:.95!important;
+  }
+  .hero h2{
+    margin:14px 0 8px!important;
+    font-size:19px!important;
+  }
+  .hero-text{
+    margin:0!important;
+    font-size:11px!important;
+    line-height:1.55!important;
+  }
+  .hero-actions{
+    margin-top:16px!important;
+    gap:8px!important;
+  }
+  .hero-actions button{
+    width:100%!important;
+    min-height:44px!important;
+  }
+}
+/* ===== END MOBILE HERO SCALE FIX v1.14.1 ===== */
