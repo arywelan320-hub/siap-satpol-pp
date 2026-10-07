@@ -2057,3 +2057,124 @@ img,svg,video,canvas{max-width:100%}
   .actual-idea-v115 h2{font-size:16px!important}
 }
 /* ===== END TYPOGRAFI KUNCI AKTUALISASI v1.15.1 ===== */
+
+
+/* ===== STRUKTUR SIAP + JEJAK AKTUALISASI v1.16 ===== */
+.drawer-group.guide .drawer-label{
+  font-size:10px!important;
+  letter-spacing:1.65px!important;
+  font-weight:950!important;
+}
+.drawer-group.guide .drawer-item{
+  min-height:58px!important;
+}
+.drawer-group.guide .drawer-copy b{
+  font-size:12px!important;
+  font-weight:900!important;
+  line-height:1.2!important;
+}
+.drawer-group.guide .drawer-copy small{
+  margin-top:3px!important;
+  font-size:8.7px!important;
+  line-height:1.35!important;
+}
+
+/* Cek kesiapan */
+.readiness-v116{max-width:930px!important}
+.readiness-hero-v116{
+  display:grid;grid-template-columns:minmax(260px,42%) minmax(0,1fr);gap:18px;
+  align-items:center;margin-bottom:14px;padding:13px;border:1px solid #D6E3EB;
+  border-radius:18px;background:#fff;box-shadow:0 8px 22px rgba(18,54,83,.07)
+}
+.readiness-hero-v116 img{
+  width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:13px;background:#EDF3F6
+}
+.readiness-hero-v116 span{
+  display:block;color:#0F669B;font-size:9px;font-weight:950;letter-spacing:1.5px;margin-bottom:6px
+}
+.readiness-hero-v116 h2{
+  margin:0 0 8px;color:#173A52;font-size:24px;line-height:1.18;letter-spacing:-.02em
+}
+.readiness-hero-v116 p{margin:0;color:#647C8D;line-height:1.55;font-size:12px}
+.readiness-grid-v116{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.readiness-grid-v116 article{
+  display:grid;grid-template-columns:42px minmax(0,1fr);gap:11px;align-items:start;
+  padding:15px;border:1px solid #D8E3EA;border-radius:14px;background:#fff
+}
+.readiness-grid-v116 article>b{
+  width:38px;height:38px;display:grid;place-items:center;border-radius:11px;
+  background:#0F5F93;color:#fff;font-size:10px;font-weight:950
+}
+.readiness-grid-v116 h3{margin:1px 0 4px;color:#183B53;font-size:14px}
+.readiness-grid-v116 p{margin:0!important;color:#6A7F8E!important;font-size:10.5px!important;line-height:1.45!important}
+.readiness-note-v116{
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;
+  margin-top:12px;padding:13px 14px;border-radius:13px;background:#0B426D;color:#EAF4FA
+}
+.readiness-note-v116 b{color:#FFD45A;font-size:11px}
+.readiness-note-v116 span{font-size:10px;line-height:1.4}
+.readiness-note-v116 button{
+  min-height:38px;border:1px solid rgba(255,255,255,.4);border-radius:9px;
+  background:#fff;color:#0B4C78;padding:8px 11px;font-weight:900;font-size:10px
+}
+
+/* Jejak 6 kegiatan */
+.actual-journey-v116{margin:32px 0 30px!important}
+.actual-journey-head-v116{
+  margin-bottom:14px;padding:17px 18px;border-left:5px solid #FFC107;border-radius:12px;
+  background:linear-gradient(135deg,#F8FBFD,#EEF6FA)
+}
+.actual-journey-head-v116>span{
+  display:block;margin-bottom:4px;color:#0E6598;font-size:9px;font-weight:950;letter-spacing:1.55px
+}
+.actual-journey-head-v116 .section-title{
+  margin:0 0 5px!important;padding-left:0!important;color:#153850;font-size:26px!important;font-weight:950
+}
+.actual-journey-head-v116 .section-title:before{display:none!important}
+.actual-journey-head-v116 p{margin:0!important;color:#6C8190!important;font-size:11px!important;line-height:1.5!important}
+.actual-visual-grid-v116{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+.actual-visual-grid-v116 article{
+  border-radius:15px!important;transition:transform .18s ease,box-shadow .18s ease
+}
+.actual-visual-grid-v116 article:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(18,54,83,.10)}
+.actual-photo-wrap-v116{position:relative;background:#EAF1F5;overflow:hidden}
+.actual-photo-wrap-v116>span{
+  position:absolute;z-index:2;top:9px;left:9px;width:34px;height:34px;display:grid;place-items:center;
+  border-radius:10px;background:#0B4F7D;color:#fff;font-size:10px;font-weight:950;
+  box-shadow:0 4px 12px rgba(0,0,0,.16)
+}
+.actual-visual-grid-v116 .actual-photo{
+  width:100%!important;height:150px!important;object-fit:cover!important;object-position:center!important
+}
+.actual-visual-grid-v116 b{
+  margin-top:12px!important;color:#173A52!important;font-size:13px!important;font-weight:900!important;line-height:1.28!important
+}
+.actual-visual-grid-v116 small{
+  color:#708494!important;font-size:9.5px!important;line-height:1.45!important
+}
+
+/* Dasar Hukum sebagai title struktur resmi */
+#hukum .subhead h1{font-weight:950!important;letter-spacing:-.025em}
+#hukum .subhead>div>span{font-weight:950!important;letter-spacing:1.5px!important}
+
+@media(max-width:800px){
+  .actual-visual-grid-v116{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+  .readiness-hero-v116{grid-template-columns:1fr}
+  .readiness-grid-v116{grid-template-columns:1fr}
+  .readiness-note-v116{grid-template-columns:1fr}
+  .readiness-note-v116 button{width:100%;min-height:44px}
+  .actual-journey-head-v116 .section-title{font-size:22px!important}
+}
+@media(max-width:430px){
+  .actual-visual-grid-v116{grid-template-columns:1fr!important}
+  .actual-visual-grid-v116 .actual-photo{height:auto!important;max-height:250px!important;object-fit:contain!important}
+  .actual-journey-head-v116{padding:14px}
+  .actual-journey-head-v116 .section-title{font-size:19px!important}
+  .actual-journey-head-v116 p{font-size:9.5px!important}
+  .readiness-hero-v116 h2{font-size:18px}
+  .readiness-hero-v116 p{font-size:10px}
+  .readiness-grid-v116 h3{font-size:12px}
+}
+/* ===== END STRUKTUR SIAP + JEJAK v1.16 ===== */
