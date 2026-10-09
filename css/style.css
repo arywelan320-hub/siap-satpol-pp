@@ -4861,3 +4861,572 @@ img,svg,video,canvas{max-width:100%}
 
 /* ===== END FINALISASI v1.14.0 ===== */
 
+
+/* ===== AUDIT MOBILE FINAL v1.14.2 ===== */
+
+/* Aturan dasar aman untuk HP */
+html,body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+img,video,svg,canvas{
+  max-width:100%;
+}
+
+/* Hindari zoom otomatis iPhone/Chrome saat form difokuskan */
+@media(max-width:650px){
+  input,
+  select,
+  textarea{
+    font-size:16px !important;
+  }
+
+  button,
+  .navbtn,
+  summary,
+  .sim-select,
+  .sim-option,
+  .test-tab,
+  .comm-case{
+    touch-action:manipulation;
+  }
+
+  /* Header mobile final */
+  body{
+    padding-top:48px !important;
+    padding-bottom:calc(72px + env(safe-area-inset-bottom)) !important;
+    overflow-x:hidden !important;
+  }
+
+  body>.mobile-shell-v1151{
+    height:48px !important;
+    min-height:48px !important;
+    padding-left:max(10px,env(safe-area-inset-left)) !important;
+    padding-right:max(10px,env(safe-area-inset-right)) !important;
+  }
+
+  .mobile-shell-menu-v1151{
+    min-width:72px !important;
+    min-height:36px !important;
+  }
+
+  /* Drawer */
+  .mobile-menu.app-drawer.drawer-v1134{
+    width:min(94vw,390px) !important;
+    max-width:390px !important;
+    min-width:0 !important;
+    height:100dvh !important;
+    max-height:100dvh !important;
+    padding-bottom:env(safe-area-inset-bottom) !important;
+  }
+
+  .drawer-scroll-v1134{
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .drawer-item-v1134{
+    min-height:56px !important;
+  }
+
+  .drawer-copy-v1134 b{
+    font-size:13px !important;
+    line-height:1.25 !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+    hyphens:none !important;
+  }
+
+  .drawer-copy-v1134 small{
+    font-size:9px !important;
+    line-height:1.3 !important;
+  }
+
+  /* Header halaman */
+  .subhead{
+    width:100% !important;
+    min-width:0 !important;
+    padding:12px 10px !important;
+    gap:9px !important;
+  }
+
+  .subhead>div{
+    min-width:0 !important;
+  }
+
+  .subhead h1{
+    font-size:20px !important;
+    line-height:1.15 !important;
+    overflow-wrap:break-word !important;
+  }
+
+  .subhead p{
+    font-size:10.5px !important;
+    line-height:1.4 !important;
+  }
+
+  .subhead .back{
+    flex:0 0 42px !important;
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+  }
+
+  /* Konten umum */
+  .content,
+  .content.narrow,
+  .komunikasi-v1137,
+  .respons-v1136,
+  .situasi-v1138,
+  .koordinasi-v1140,
+  .hukum-v1140,
+  .sim-simple-v113,
+  .test-simple-v113,
+  .feedback-simple-v113{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    padding-left:10px !important;
+    padding-right:10px !important;
+  }
+
+  /* Dashboard */
+  .author-profile-v1133{
+    margin-left:10px !important;
+    margin-right:10px !important;
+  }
+
+  .dashboard-v113{
+    width:100% !important;
+    padding-left:10px !important;
+    padding-right:10px !important;
+    gap:12px !important;
+  }
+
+  .dashboard-v113 .card{
+    width:100% !important;
+    min-width:0 !important;
+    grid-template-columns:50px minmax(0,1fr) 32px !important;
+    grid-template-rows:176px minmax(92px,auto) !important;
+  }
+
+  .dashboard-v113 .card > img.card-photo{
+    width:100% !important;
+    height:176px !important;
+    object-fit:cover !important;
+    object-position:center 38% !important;
+  }
+
+  .dashboard-v113 .card > .card-copy{
+    min-width:0 !important;
+    padding-right:5px !important;
+  }
+
+  .dashboard-v113 .card > .card-copy b{
+    font-size:15px !important;
+    line-height:1.2 !important;
+    overflow-wrap:break-word !important;
+  }
+
+  .dashboard-v113 .card > .card-copy small{
+    font-size:10px !important;
+    line-height:1.4 !important;
+  }
+
+  .support-v113{
+    margin-left:10px !important;
+    margin-right:10px !important;
+  }
+
+  .support-buttons-v113{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+  }
+
+  .support-buttons-v113 button{
+    width:100% !important;
+    min-height:44px !important;
+  }
+
+  /* Kesiapan */
+  .readiness-intro-v113{
+    grid-template-columns:1fr !important;
+  }
+
+  .readiness-list-v113 article{
+    grid-template-columns:36px minmax(0,1fr) !important;
+  }
+
+  .readiness-list-v113 p{
+    font-size:10.5px !important;
+    line-height:1.45 !important;
+  }
+
+  /* Respons awal */
+  .respons-check-v1136{
+    grid-template-columns:1fr !important;
+  }
+
+  .steps-v1136 article{
+    grid-template-columns:40px minmax(0,1fr) !important;
+  }
+
+  .steps-v1136 article p{
+    font-size:10.5px !important;
+  }
+
+  /* Panduan komunikasi */
+  .comm-principles-v1137,
+  .comm-steps-v1137{
+    grid-template-columns:1fr !important;
+  }
+
+  .comm-flow-v1137{
+    gap:5px !important;
+  }
+
+  .comm-flow-v1137 b{
+    font-size:8.5px !important;
+    line-height:1.2 !important;
+  }
+
+  .comm-steps-v1137>article{
+    grid-template-columns:38px minmax(0,1fr) !important;
+  }
+
+  .comm-steps-v1137 article>div>p,
+  .comm-example-v1137 p{
+    font-size:10.5px !important;
+  }
+
+  .comm-grid-v1137{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Panduan situasi */
+  .situasi-card-v1138 summary{
+    min-height:82px !important;
+    grid-template-columns:76px 30px minmax(0,1fr) 18px !important;
+    gap:6px !important;
+  }
+
+  .situasi-card-v1138 summary img{
+    width:76px !important;
+    height:76px !important;
+  }
+
+  .situasi-title-v1138 b{
+    font-size:11.5px !important;
+    overflow-wrap:break-word !important;
+  }
+
+  .situasi-grid-v1138{
+    grid-template-columns:1fr !important;
+  }
+
+  .situasi-grid-v1138 p,
+  .situasi-focus-v1138 p,
+  .situasi-coordinate-v1138 span{
+    font-size:10px !important;
+  }
+
+  /* Alur koordinasi */
+  .coord-decision-v1140,
+  .coord-report-grid-v1140{
+    grid-template-columns:1fr !important;
+  }
+
+  .coord-flow-v1140 article{
+    grid-template-columns:40px minmax(0,1fr) !important;
+  }
+
+  .coord-report-grid-v1140 article{
+    display:grid !important;
+    grid-template-columns:30px minmax(0,1fr) !important;
+    gap:8px !important;
+    align-items:center !important;
+    text-align:left !important;
+  }
+
+  .coord-report-grid-v1140 b{
+    margin:0 !important;
+  }
+
+  .coord-report-grid-v1140 span{
+    font-size:9.5px !important;
+    text-align:left !important;
+  }
+
+  /* Dasar hukum */
+  .law-list-v1140 summary{
+    min-height:58px !important;
+    grid-template-columns:32px minmax(0,1fr) 18px !important;
+    gap:7px !important;
+    padding:9px !important;
+  }
+
+  .law-list-v1140 summary b{
+    font-size:10.8px !important;
+    overflow-wrap:break-word !important;
+  }
+
+  .law-list-v1140 summary small{
+    font-size:8.5px !important;
+  }
+
+  .law-body-v1140{
+    padding-left:49px !important;
+  }
+
+  .law-body-v1140 p{
+    font-size:9.8px !important;
+  }
+
+  /* Simulasi */
+  .sim-simple-tabs-v113{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .sim-simple-tabs-v113 button{
+    min-height:44px !important;
+    font-size:9.5px !important;
+  }
+
+  .sim-simple-card-v113{
+    padding:10px !important;
+  }
+
+  .sim-simple-card-v113 img.sim-hero-image{
+    max-height:280px !important;
+  }
+
+  .sim-option{
+    min-height:48px !important;
+  }
+
+  #simNext{
+    width:100% !important;
+    min-height:44px !important;
+  }
+
+  /* Tes */
+  .test-tabs-v113{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .participant-fields-v113 input,
+  .feedback-simple-v113 input,
+  .feedback-simple-v113 select,
+  .feedback-simple-v113 textarea{
+    width:100% !important;
+    min-height:44px !important;
+  }
+
+  .quiz-question-v113{
+    min-width:0 !important;
+  }
+
+  .quiz-question-v113 legend{
+    font-size:11.5px !important;
+    line-height:1.4 !important;
+  }
+
+  .quiz-question-v113 label span{
+    min-height:46px !important;
+    font-size:10.5px !important;
+    line-height:1.4 !important;
+  }
+
+  .quiz-submit,
+  .feedback-submit{
+    width:100% !important;
+    min-height:46px !important;
+  }
+
+  /* Footer */
+  .main-footer-v1133{
+    padding-left:14px !important;
+    padding-right:14px !important;
+    padding-bottom:calc(86px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .footer-author-v1133 strong{
+    font-size:17px !important;
+  }
+
+  /* Bottom navigation */
+  .bottom-nav{
+    position:fixed !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    z-index:1100 !important;
+    width:100% !important;
+    height:calc(58px + env(safe-area-inset-bottom)) !important;
+    display:grid !important;
+    grid-template-columns:repeat(4,1fr) !important;
+    padding:4px max(6px,env(safe-area-inset-left)) env(safe-area-inset-bottom) max(6px,env(safe-area-inset-right)) !important;
+    border-top:1px solid #D2E0E8 !important;
+    background:rgba(255,255,255,.97) !important;
+    box-shadow:0 -3px 12px rgba(18,54,83,.08) !important;
+  }
+
+  .bottom-nav button{
+    min-width:0 !important;
+    min-height:50px !important;
+    padding:4px 2px !important;
+    border-radius:8px !important;
+  }
+
+  .bottom-nav button span{
+    display:block !important;
+    font-size:17px !important;
+    line-height:1 !important;
+  }
+
+  .bottom-nav button small{
+    display:block !important;
+    margin-top:3px !important;
+    font-size:8.5px !important;
+    line-height:1.1 !important;
+    white-space:nowrap !important;
+  }
+}
+
+@media(max-width:370px){
+  .mobile-shell-copy-v1151 small{
+    display:none !important;
+  }
+
+  .dashboard-v113 .card{
+    grid-template-rows:160px minmax(90px,auto) !important;
+  }
+
+  .dashboard-v113 .card > img.card-photo{
+    height:160px !important;
+  }
+
+  .situasi-title-v1138 small{
+    display:none !important;
+  }
+
+  .sim-simple-tabs-v113{
+    grid-template-columns:1fr !important;
+  }
+
+  .test-tabs-v113{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* ===== END AUDIT MOBILE FINAL v1.14.2 ===== */
+
+
+/* ===== RUNTIME FIX v1.14.3 ===== */
+.comm-detail-kicker-v1143{
+  display:block;
+  margin-bottom:4px;
+  color:#0C6898;
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:1px;
+}
+
+.comm-detail-grid-v1143{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+  margin-top:9px;
+}
+
+.comm-detail-grid-v1143 article{
+  padding:9px 10px;
+  border:1px solid #DFE8ED;
+  border-radius:9px;
+  background:#FFFFFF;
+}
+
+.comm-detail-grid-v1143 small{
+  display:block;
+  color:#0C6997;
+  font-size:7.5px;
+  font-weight:950;
+  letter-spacing:.8px;
+}
+
+.comm-detail-grid-v1143 p{
+  margin:4px 0 0;
+  color:#5E7785;
+  font-size:9.5px;
+  line-height:1.45;
+}
+
+.comm-detail-coord-v1143{
+  margin-top:7px;
+  padding:8px 9px;
+  border-radius:8px;
+  background:#FFF7E7;
+}
+
+.comm-detail-coord-v1143 b{
+  color:#765710;
+  font-size:9px;
+}
+
+.comm-detail-coord-v1143 span{
+  color:#72674B;
+  font-size:9px;
+  line-height:1.4;
+}
+
+@media(max-width:650px){
+  .comm-detail-grid-v1143{
+    grid-template-columns:1fr;
+  }
+}
+/* ===== END RUNTIME FIX v1.14.3 ===== */
+
+
+/* ===== FINAL INTERAKTIF MOBILE v1.14.4 ===== */
+.sim-option-v1144{
+  width:100%;
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr);
+  gap:8px;
+  align-items:center;
+  margin-top:7px;
+  padding:9px 10px;
+  border:1px solid #D9E4EA;
+  border-radius:10px;
+  background:#FFFFFF;
+  color:#35556A;
+  text-align:left;
+  cursor:pointer;
+}
+.sim-option-v1144>span{
+  width:30px;height:30px;display:grid;place-items:center;
+  border-radius:8px;background:#EDF4F8;color:#0D6697;
+  font-weight:950;font-size:9px;
+}
+.sim-option-v1144 p{
+  margin:0;font-size:10px;line-height:1.42;
+}
+.sim-option-v1144.selected-good{border-color:#15945F;background:#EFF9F4}
+.sim-option-v1144.selected-mid{border-color:#D3A22C;background:#FFF8E6}
+.sim-option-v1144.selected-bad{border-color:#C76055;background:#FFF1EF}
+
+@media(max-width:650px){
+  #simOptions{display:grid;gap:2px}
+  .sim-option-v1144{min-height:48px!important}
+  #quizForm{display:grid!important;gap:9px!important}
+  .quiz-question-v113{display:block!important}
+  .quiz-question-v113 label{display:block!important}
+}
+/* ===== END FINAL INTERAKTIF MOBILE v1.14.4 ===== */
+

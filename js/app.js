@@ -16,6 +16,19 @@ document.querySelectorAll(".navbtn").forEach(btn=>{
   btn.addEventListener("click",()=>showPage(btn.dataset.page));
 });
 
+/* ===== ROUTING AMAN v1.14.3 ===== */
+(function(){
+  function openHashPage(){
+    const id=(location.hash||"#beranda").replace("#","");
+    const target=document.getElementById(id);
+    showPage(target ? id : "beranda", false);
+  }
+  openHashPage();
+  window.addEventListener("hashchange",openHashPage);
+})();
+/* ===== END ROUTING AMAN v1.14.3 ===== */
+
+
 /* ===== DRAWER MENU v1.7 ===== */
 const desktopMenuButton=document.getElementById("desktopMenuButton");
 const menuBackdrop=document.getElementById("menuBackdrop");
@@ -127,21 +140,50 @@ const COMM={
 };
 
 const commDetail=document.getElementById("commDetail");
-document.querySelectorAll(".comm-case").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const d=COMM[btn.dataset.case];
-    if(!d)return;
-    document.getElementById("commTitle").textContent=d.title;
-    document.getElementById("commOpen").textContent=d.open;
-    document.getElementById("commExample").textContent=d.example;
-    document.getElementById("commReject").textContent=d.reject;
-    document.getElementById("commAvoid").textContent=d.avoid;
-    document.getElementById("commCoord").textContent=d.coord;
-    commDetail.classList.remove("hidden");
-    setTimeout(()=>commDetail.scrollIntoView({behavior:"smooth",block:"start"}),50);
+if(commDetail){
+  document.querySelectorAll(".comm-case").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const d=COMM[btn.dataset.case];
+      if(!d)return;
+
+      commDetail.innerHTML=`
+        <button type="button" aria-label="Tutup" id="closeCommDetail">×</button>
+        <span class="comm-detail-kicker-v1143">CONTOH KOMUNIKASI</span>
+        <h2 id="commTitle">${d.title}</h2>
+        <div class="comm-detail-grid-v1143">
+          <article>
+            <small>PEMBUKA</small>
+            <p>${d.open}</p>
+          </article>
+          <article>
+            <small>CONTOH KALIMAT</small>
+            <p>${d.example}</p>
+          </article>
+          <article>
+            <small>JIKA ADA KEBERATAN</small>
+            <p>${d.reject}</p>
+          </article>
+          <article>
+            <small>HINDARI</small>
+            <p>${d.avoid}</p>
+          </article>
+        </div>
+        <div class="comm-detail-coord-v1143">
+          <b>Koordinasikan bila:</b>
+          <span>${d.coord}</span>
+        </div>
+      `;
+      commDetail.classList.remove("hidden");
+      setTimeout(()=>commDetail.scrollIntoView({behavior:"smooth",block:"start"}),50);
+    });
   });
-});
-const closeCommDetail=document.getElementById("closeCommDetail"); if(closeCommDetail) closeCommDetail.addEventListener("click",()=>commDetail.classList.add("hidden"));
+
+  commDetail.addEventListener("click",e=>{
+    if(e.target.closest("#closeCommDetail")){
+      commDetail.classList.add("hidden");
+    }
+  });
+}
 
 /* Panduan situasi ringkas */
 const detail=document.getElementById("detail");
@@ -156,20 +198,21 @@ document.querySelectorAll(".situations button").forEach(btn=>{
 
 const closeDetail=document.getElementById("closeDetail"); if(closeDetail) closeDetail.addEventListener("click",()=>detail.classList.add("hidden"));
 
-document.getElementById("searchSituasi").addEventListener("input",e=>{
-  const q=e.target.value.toLowerCase().trim();
-  document.querySelectorAll(".situations button").forEach(btn=>{
-    const hay=(btn.textContent+" "+btn.dataset.title).toLowerCase();
-    btn.style.display=hay.includes(q)?"":"none";
+const searchSituasi=document.getElementById("searchSituasi");
+if(searchSituasi){
+  searchSituasi.addEventListener("input",e=>{
+    const q=e.target.value.toLowerCase().trim();
+    document.querySelectorAll(".situations button").forEach(btn=>{
+      const hay=(btn.textContent+" "+(btn.dataset.title||"")).toLowerCase();
+      btn.style.display=hay.includes(q)?"":"none";
+    });
   });
-});
+}
 
 document.addEventListener("click",e=>{
   if(!menu.contains(e.target)&&!burger.contains(e.target))menu.classList.remove("open");
 });
 
-const first=location.hash.replace("#","")||"beranda";
-showPage(document.getElementById(first)?first:"beranda",false);
 
 
 
