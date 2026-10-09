@@ -7,9 +7,10 @@
 <meta content="#0B3F6B" name="theme-color"/>
 <meta content="SIAP SATPOL PP Kabupaten Lembata - panduan komunikasi lapangan berbasis digital dan QR Code." name="description"/>
 <title>SIAP SATPOL PP | Kabupaten Lembata</title>
-<link href="css/style.css?v=1146" rel="stylesheet"/>
+<link href="css/style.css?v=1147" rel="stylesheet"/>
 </head>
 <body>
+<input type="checkbox" id="nativeMenuToggle" class="native-menu-toggle-v1147" aria-hidden="true">
 
 <!-- ===== MOBILE SHELL v1.15.1 ===== -->
 <header class="mobile-shell-v1151" aria-label="Navigasi utama SIAP SATPOL PP">
@@ -20,9 +21,7 @@
       <small>KABUPATEN LEMBATA</small>
     </span>
   </div>
-  <button type="button" id="shellMenuV1151" class="mobile-shell-menu-v1151" aria-label="Buka menu">
-    ☰ <span>Menu</span>
-  </button>
+  <label for="nativeMenuToggle" class="mobile-shell-menu-v1151 native-menu-trigger-v1147" aria-label="Buka atau tutup menu">☰ <span>Menu</span></label>
 </header>
 <!-- ===== END MOBILE SHELL v1.15.1 ===== -->
 
@@ -36,11 +35,11 @@
 </button>
 <nav class="desktop-nav compact-nav">
 <button type="button" class="navbtn" data-page="beranda">Beranda</button>
-<button type="button" aria-label="Buka menu" class="menu-trigger" id="desktopMenuButton" aria-expanded="false" aria-controls="mobileMenu">☰ Menu</button>
+<label for="nativeMenuToggle" aria-label="Buka atau tutup menu" class="menu-trigger native-menu-trigger-v1147">☰ Menu</label>
 </nav>
-<button type="button" aria-label="Buka menu" class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu">☰ Menu</button>
+<label for="nativeMenuToggle" aria-label="Buka atau tutup menu" class="hamburger native-menu-trigger-v1147">☰ Menu</label>
 </header>
-<div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+<label class="menu-backdrop" id="menuBackdrop" for="nativeMenuToggle" aria-label="Tutup menu"></label>
 
 <aside class="mobile-menu app-drawer drawer-v1134" id="mobileMenu" aria-label="Menu SIAP SATPOL PP" aria-hidden="true">
   <div class="drawer-head drawer-head-v1134">
@@ -51,97 +50,97 @@
         <small>Panduan Komunikasi Lapangan</small>
       </span>
     </div>
-    <button class="drawer-close drawer-close-v1134" id="menuCloseBtn" type="button" aria-label="Tutup menu">×</button>
+    <label class="drawer-close drawer-close-v1134 native-menu-close-v1147" for="nativeMenuToggle" aria-label="Tutup menu">×</label>
   </div>
 
   <div class="drawer-scroll drawer-scroll-v1134">
     <section class="drawer-group drawer-group-v1134">
       <p class="drawer-label">MENU UTAMA</p>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="kesiapan">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="kesiapan" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134">01</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Cek Kesiapan</b>
           <small>Checklist sebelum turun</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="respons">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="respons" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134">02</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Respons Awal</b>
           <small>Langkah respons awal</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="komunikasi">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="komunikasi" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134">03</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Panduan Komunikasi</b>
           <small>Delapan langkah komunikasi</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="situasi">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="situasi" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134">04</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Panduan Situasi</b>
           <small>Lima situasi prioritas</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="koordinasi">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="koordinasi" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134">05</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Alur Koordinasi</b>
           <small>Koordinasi &amp; tindak lanjut</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="hukum">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="hukum" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134">06</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Dasar Hukum</b>
           <small>Lima rujukan utama</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
     </section>
 
     <section class="drawer-group drawer-group-v1134 drawer-support-v1134">
       <p class="drawer-label">LATIHAN &amp; EVALUASI</p>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="simulasi">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="simulasi" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134 drawer-num-soft-v1134">S</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Simulasi Lapangan</b>
           <small>Lima latihan singkat</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="tes">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="tes" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134 drawer-num-soft-v1134">T</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Cek Pemahaman</b>
           <small>Pre-test &amp; post-test</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
 
-      <button class="drawer-item drawer-item-v1134 navbtn" data-page="feedback">
+      <label class="drawer-item drawer-item-v1134 navbtn" data-page="feedback" for="nativeMenuToggle" role="button" tabindex="0">
         <span class="drawer-num-v1134 drawer-num-soft-v1134">M</span>
         <span class="drawer-copy drawer-copy-v1134">
           <b>Uji Coba &amp; Masukan</b>
           <small>Masukan pengguna</small>
         </span>
         <span class="drawer-arrow">›</span>
-      </button>
+      </label>
     </section>
   </div>
 
@@ -1114,11 +1113,10 @@
     <span>Satuan Polisi Pamong Praja Kabupaten Lembata</span>
   </div>
 
-  <small class="footer-version-v1133">Aktualisasi Latsar CPNS 2026 • Versi 1.14.6</small>
+  <small class="footer-version-v1133">Aktualisasi Latsar CPNS 2026 • Versi 1.14.7</small>
 </footer>
 <script src="js/config.js"></script>
-<script src="js/app.js?v=1146"></script>
-<script src="js/runtime-final-v1144.js?v=1146"></script>
-<script src="js/menu-fix-v1146.js?v=1146"></script>
+<script src="js/app.js?v=1147"></script>
+<script src="js/runtime-final-v1144.js?v=1147"></script>
 </body>
 </html>

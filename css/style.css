@@ -5536,3 +5536,125 @@ img,video,svg,canvas{
 
 /* ===== END SERAGAM DASHBOARD v1.14.5 ===== */
 
+
+/* ===== MENU NATIVE TANPA JS v1.14.7 ===== */
+
+/* Checkbox ini adalah mesin menu. Browser sendiri yang mengubah statusnya. */
+.native-menu-toggle-v1147{
+  position:fixed !important;
+  width:1px !important;
+  height:1px !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  left:-9999px !important;
+  top:-9999px !important;
+}
+
+/* Semua pemicu menu benar-benar dapat diklik. */
+.native-menu-trigger-v1147,
+.native-menu-close-v1147{
+  cursor:pointer !important;
+  user-select:none !important;
+  -webkit-user-select:none !important;
+  pointer-events:auto !important;
+  touch-action:manipulation !important;
+}
+
+/* Desktop */
+@media(min-width:1001px){
+  .compact-nav{
+    display:flex !important;
+  }
+  .compact-nav .native-menu-trigger-v1147{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-height:44px !important;
+    padding:9px 13px !important;
+    border:1px solid rgba(255,255,255,.25) !important;
+    border-radius:10px !important;
+    color:#FFFFFF !important;
+    background:transparent !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+  }
+  .hamburger.native-menu-trigger-v1147{
+    display:none !important;
+  }
+}
+
+/* Tablet memakai hamburger lama, sekarang sebagai label native. */
+@media(min-width:651px) and (max-width:1000px){
+  .compact-nav{
+    display:none !important;
+  }
+  .hamburger.native-menu-trigger-v1147{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    margin-left:auto !important;
+    min-height:44px !important;
+    padding:9px 11px !important;
+    border:1px solid rgba(255,255,255,.25) !important;
+    border-radius:9px !important;
+    color:#FFFFFF !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+  }
+}
+
+/* HP memakai mobile shell. */
+@media(max-width:650px){
+  .mobile-shell-menu-v1151.native-menu-trigger-v1147{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:5px !important;
+    min-width:72px !important;
+    min-height:36px !important;
+    pointer-events:auto !important;
+  }
+}
+
+/* Inilah bagian penting: tidak ada JavaScript.
+   Checkbox checked langsung membuka backdrop dan drawer. */
+#nativeMenuToggle:checked ~ #menuBackdrop{
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+}
+
+#nativeMenuToggle:checked ~ #mobileMenu{
+  transform:translateX(0) !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+
+/* Feedback visual saat menu terbuka. */
+#nativeMenuToggle:checked ~ .topbar .native-menu-trigger-v1147,
+#nativeMenuToggle:checked ~ .mobile-shell-v1151 .native-menu-trigger-v1147{
+  background:rgba(255,193,7,.14) !important;
+  border-color:rgba(255,193,7,.55) !important;
+  color:#FFD24D !important;
+}
+
+/* Tutup scroll halaman saat menu terbuka pada browser modern. */
+body:has(#nativeMenuToggle:checked){
+  overflow:hidden !important;
+}
+
+/* Item drawer tetap tampil sebagai kartu navigasi meski sekarang elemennya label. */
+.mobile-menu.app-drawer label.drawer-item-v1134{
+  cursor:pointer !important;
+  text-decoration:none !important;
+}
+
+/* X penutup native */
+.native-menu-close-v1147{
+  display:grid !important;
+  place-items:center !important;
+}
+
+/* ===== END MENU NATIVE TANPA JS v1.14.7 ===== */
+
