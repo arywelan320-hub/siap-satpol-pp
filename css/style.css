@@ -1605,6 +1605,238 @@ summary:focus-visible{
 /* ===== END SIMULASI LAPANGAN v1.11 ===== */
 
 
+/* ===== PERJELAS DASAR HUKUM SEMUA v1.9.7 ===== */
+.law-inline-detail{
+  border-width:1px;
+  border-color:#AFCBDD;
+  border-radius:18px;
+  box-shadow:0 12px 28px rgba(18,54,83,.10);
+}
+
+.law-inline-head{
+  padding:18px 20px 16px;
+  background:linear-gradient(135deg,#0B426D 0%,#0E6598 65%,#1676A8 100%);
+}
+.law-inline-kicker{
+  display:block;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.45px;
+  text-transform:uppercase;
+  color:#FFD45A;
+}
+.law-inline-head h3{
+  margin:7px 0 6px;
+  color:#fff;
+  font-size:30px;
+  line-height:1.17;
+  font-weight:900;
+}
+.law-inline-head p{
+  margin:0 !important;
+  color:#E3F0F8 !important;
+  font-size:15px !important;
+  line-height:1.6 !important;
+}
+
+.law-inline-sections{
+  gap:12px;
+  padding:14px;
+  background:#F6F9FB;
+}
+.law-inline-box{
+  padding:16px 18px;
+  border-radius:14px;
+  border:1px solid #D4E1E8;
+  box-shadow:0 2px 0 rgba(255,255,255,.65) inset;
+}
+.law-inline-box.national{border-left-width:5px}
+.law-inline-box.local{border-left-width:5px}
+.law-inline-box.action{border-left-width:5px}
+.law-inline-box.caution{
+  background:#FFF9E8;
+  border-color:#ECD695;
+}
+
+.law-inline-label{
+  display:block;
+  margin-bottom:7px;
+  color:#617B8C;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.25px;
+  text-transform:uppercase;
+}
+.law-inline-box strong{
+  display:block;
+  color:#163A52;
+  font-size:21px;
+  line-height:1.35;
+  font-weight:900;
+}
+.law-inline-box p{
+  margin:7px 0 0 !important;
+  color:#5E7889 !important;
+  font-size:15px !important;
+  line-height:1.68 !important;
+}
+.law-inline-box ul{
+  margin:8px 0 0;
+  padding-left:20px;
+  color:#557182;
+  font-size:15px;
+  line-height:1.65;
+}
+.law-inline-box li{margin:6px 0}
+
+.law-inline-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.law-inline-links a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:8px 12px;
+  border:1px solid #BCD2DF;
+  border-radius:999px;
+  background:#fff;
+  color:#0C5F93;
+  font-size:12px;
+  font-weight:900;
+  text-decoration:none;
+  line-height:1.25;
+}
+
+.law-inline-note{
+  padding:13px 16px;
+  border-top:1px solid #D8E5EC;
+  background:#fff;
+  color:#6A808F;
+  font-size:13px;
+  line-height:1.6;
+}
+.law-inline-note b{color:#3E5F73}
+
+@media (max-width:1100px){
+  .law-inline-head h3{font-size:26px}
+  .law-inline-box strong{font-size:19px}
+}
+
+@media (max-width:800px){
+  .law-inline-head{padding:16px}
+  .law-inline-kicker{font-size:10px}
+  .law-inline-head h3{font-size:24px}
+  .law-inline-head p,
+  .law-inline-box p,
+  .law-inline-box ul{font-size:14px !important}
+  .law-inline-box strong{font-size:18px}
+  .law-inline-label{font-size:10px}
+}
+
+@media (max-width:600px){
+  .law-inline-detail{
+    border-radius:16px;
+  }
+  .law-inline-head{
+    padding:15px 14px;
+  }
+  .law-inline-kicker{
+    font-size:9.5px;
+    letter-spacing:1.1px;
+  }
+  .law-inline-head h3{
+    margin:6px 0 5px;
+    font-size:22px;
+    line-height:1.2;
+  }
+  .law-inline-head p{
+    font-size:14px !important;
+    line-height:1.58 !important;
+  }
+  .law-inline-sections{
+    gap:10px;
+    padding:10px;
+  }
+  .law-inline-box{
+    padding:13px 13px;
+    border-radius:12px;
+  }
+  .law-inline-label{
+    margin-bottom:6px;
+    font-size:9.5px;
+  }
+  .law-inline-box strong{
+    font-size:17px;
+    line-height:1.32;
+  }
+  .law-inline-box p,
+  .law-inline-box ul{
+    font-size:13.5px !important;
+    line-height:1.58 !important;
+  }
+  .law-inline-links a{
+    min-height:34px;
+    padding:7px 10px;
+    font-size:11.5px;
+  }
+  .law-inline-note{
+    padding:11px 12px;
+    font-size:12.5px;
+    line-height:1.55;
+  }
+}
+/* ===== END PERJELAS DASAR HUKUM SEMUA v1.9.7 ===== */
+
+
+/* ===== EVALUASI PEMBELAJARAN v1.12 ===== */
+.eval-v112,.progress-v112,.feedback-v112,.data-v112{max-width:1040px!important}
+.eval-summary-v112{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.eval-summary-v112 article,.progress-grid-v112 article,.evidence-grid-v112 article{padding:14px;border:1px solid #D8E3EA;border-radius:13px;background:#fff;box-shadow:0 4px 12px rgba(18,54,83,.04)}
+.eval-summary-v112 span,.progress-grid-v112 span,.evidence-grid-v112 span{display:block;color:#748896;font-size:8px;font-weight:950;letter-spacing:1px}
+.eval-summary-v112 b,.progress-grid-v112 b,.evidence-grid-v112 b{display:block;margin:4px 0 2px;color:#173A52;font-size:20px}
+.eval-summary-v112 small,.progress-grid-v112 small,.evidence-grid-v112 small{color:#81909A;font-size:9.5px}
+.participant-card-v112{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,46%);gap:15px;align-items:center;margin-bottom:12px;padding:16px 17px;border:1px solid #D6E3EA;border-radius:15px;background:linear-gradient(135deg,#F8FBFD,#EEF6FA)}
+.participant-card-v112>div>span,.sheet-connect-v112>div>span{color:#0C699D;font-size:8.5px;font-weight:950;letter-spacing:1.2px}
+.participant-card-v112 h2,.sheet-connect-v112 h2{margin:4px 0;color:#183B52;font-size:17px}
+.participant-card-v112 p,.sheet-connect-v112 p{margin:0;color:#6B808E;font-size:10.5px;line-height:1.45}
+.participant-fields-v112,.fb-identity-v112{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.participant-fields-v112 label,.fb-identity-v112 label,.likert-grid-v112 label{display:block}
+.participant-fields-v112 label>span,.fb-identity-v112 label>span,.likert-grid-v112 label>span,.feedback-form-v112>label>span{display:block;margin-bottom:5px;color:#536D7E;font-size:9.5px;font-weight:850}
+.participant-fields-v112 input,.fb-identity-v112 input,.sheet-url-row-v112 input{width:100%;box-sizing:border-box;min-height:39px;padding:9px 10px;border:1px solid #C8D8E2;border-radius:9px;background:#fff;color:#17384F;outline:0}
+.test-tabs-v112{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;margin:0 0 10px!important}
+.test-tabs-v112 .test-tab{display:grid!important;grid-template-columns:36px 1fr!important;align-items:center!important;gap:8px!important;padding:10px 11px!important;text-align:left!important;border:1px solid #D8E3EA!important;border-radius:12px!important;background:#fff!important}
+.test-tabs-v112 .test-tab>b{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;background:#EDF4F8;color:#0D669A;font-size:10px}
+.test-tabs-v112 .test-tab>span{display:block;color:#294A60;font-weight:900}.test-tabs-v112 .test-tab small{display:block;margin-top:2px;color:#80909A;font-size:9px}
+.test-tabs-v112 .test-tab.active{border-color:#D3A43A!important;background:#FFF9E8!important}
+.quiz-v112{display:grid;gap:9px}.quiz-question-v112{margin:0;padding:13px;border:1px solid #D8E3EA;border-radius:13px;background:#fff}
+.quiz-question-v112 legend{display:flex;gap:8px;align-items:flex-start;width:calc(100% - 10px);padding:0 5px;color:#183B52;font-size:12px;font-weight:900;line-height:1.4}
+.quiz-question-v112 legend>span{flex:0 0 auto;width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#EAF4FA;color:#0C669A;font-size:9px}
+.quiz-question-v112 label{display:block;margin-top:7px;cursor:pointer}.quiz-question-v112 label input{position:absolute;opacity:0;pointer-events:none}
+.quiz-question-v112 label>span{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:center;padding:9px 10px;border:1px solid #E0E8ED;border-radius:10px;background:#FAFCFD;color:#597181;font-size:10.5px;line-height:1.4}
+.quiz-question-v112 label>span>b{width:26px;height:26px;display:grid;place-items:center;border-radius:7px;background:#EEF3F6;color:#506B7D;font-size:9px}
+.quiz-question-v112 input:checked+span{border-color:#0E6B9F;background:#EFF8FC}.quiz-question-v112 input:checked+span>b{background:#0E6B9F;color:#fff}
+.result-score-row-v112{display:flex;gap:10px;align-items:center}.result-score-row-v112 h2{margin:0!important}.result-score-row-v112>span{padding:5px 8px;border-radius:999px;font-size:9px;font-weight:900}.result-score-row-v112>span.good{background:#E4F6EC;color:#087148}.result-score-row-v112>span.mid{background:#FFF1C9;color:#875A00}.result-score-row-v112>span.low{background:#FCE9E7;color:#A13E38}
+.quiz-review-v112{display:grid;gap:6px;margin-top:10px}.quiz-review-v112 details{border:1px solid #DEE7EC;border-radius:9px;background:#fff}.quiz-review-v112 summary{padding:8px 10px;cursor:pointer;font-size:9.5px;font-weight:850;color:#536E80}.quiz-review-v112 p{margin:0;padding:0 10px 9px;color:#718592;font-size:9.5px}.result-actions-v112{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.progress-hero-v112{display:grid;grid-template-columns:minmax(0,1fr) 115px;gap:16px;align-items:center;margin-bottom:11px;padding:18px 20px;border-radius:17px;background:linear-gradient(135deg,#0B4E70,#0A807D);color:#fff}
+.progress-hero-v112>div>span{color:#AEE9E3;font-size:8.5px;font-weight:950;letter-spacing:1.3px}.progress-hero-v112 h2{margin:4px 0;color:#fff;font-size:21px}.progress-hero-v112 p{margin:0;color:#D9EFEC;font-size:10.5px}
+.progress-ring-v112{--p:0;width:94px;height:94px;margin:auto;display:grid;place-items:center;align-content:center;border-radius:50%;background:radial-gradient(circle at center,#0A6B69 58%,transparent 59%),conic-gradient(#FFD45A calc(var(--p)*1%),rgba(255,255,255,.18) 0)}.progress-ring-v112 b{font-size:20px;color:#fff}.progress-ring-v112 small{color:#CFE9E6;font-size:8px}
+.progress-grid-v112{grid-template-columns:repeat(3,1fr)!important;gap:9px!important}
+.progress-panel-head-v112{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:9px}.progress-panel-head-v112 span{color:#0A7772;font-size:8px;font-weight:950}.progress-panel-head-v112 h2{margin:3px 0 0!important;font-size:16px!important}.progress-panel-head-v112>b{color:#71838F;font-size:9px}
+.milestone-v112{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}.milestone-v112>div{display:flex;gap:6px;align-items:center;padding:8px;border:1px solid #DDE6EB;border-radius:10px;background:#FAFCFD}.milestone-v112 i{width:24px;height:24px;display:grid;place-items:center;flex:0 0 auto;border-radius:50%;background:#E9EFF3;color:#7A8C98;font-style:normal;font-size:9px;font-weight:900}.milestone-v112 b{display:block;color:#536C7D;font-size:9.5px}.milestone-v112 small{display:block;color:#8A989F;font-size:8px}.milestone-v112>div.done{border-color:#B7DFC9;background:#F1FAF5}.milestone-v112>div.done i{background:#15945F;color:#fff}.milestone-v112>div.done b{color:#176B49}
+.evidence-actions-v112{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.evidence-actions-v112 button{min-height:36px;padding:8px 11px;border:1px solid #BFD4DF;border-radius:9px;background:#fff;color:#315B72;font-size:9.5px;font-weight:900}
+.feedback-intro-v112{display:grid;grid-template-columns:minmax(240px,38%) minmax(0,1fr);gap:15px;align-items:center;margin-bottom:12px;padding:11px;border:1px solid #D9E3E9;border-radius:15px;background:#fff}.feedback-intro-v112 img{width:100%;height:auto!important;object-fit:contain!important;border-radius:11px!important}.feedback-intro-v112 span{color:#65747E;font-size:8px;font-weight:950}.feedback-intro-v112 h2{margin:4px 0;color:#253F50;font-size:18px}.feedback-intro-v112 p{margin:0;color:#70818B;font-size:10.5px}
+.feedback-form-v112{display:grid;gap:9px}.likert-grid-v112{display:grid;grid-template-columns:1fr 1fr;gap:9px}.feedback-form-v112 select,.feedback-form-v112 textarea{width:100%;box-sizing:border-box;border:1px solid #C9D8E1;border-radius:9px;background:#fff;color:#36566A;padding:9px 10px}.feedback-form-v112 select{min-height:39px}
+.sheet-connect-v112{padding:15px 16px;margin-bottom:10px;border:1px solid #D6E2E9;border-radius:14px;background:linear-gradient(135deg,#F9FBFD,#EEF6FA)}.sheet-url-row-v112{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px;margin-top:10px}.sheet-url-row-v112 button{min-height:39px;padding:8px 12px;border:0;border-radius:9px;background:#0C669A;color:#fff;font-size:9.5px;font-weight:900}.sheet-connect-v112>small{display:block;margin-top:5px;color:#81909A;font-size:8.5px}
+.evidence-grid-v112{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}.data-actions-v112{display:grid!important;grid-template-columns:1fr 1fr 1.2fr!important;gap:8px!important}.data-actions-v112 #syncAllData{background:#0B706D!important;color:#fff!important}.sync-result-v112{margin:9px 0;padding:9px 11px;border-radius:9px;background:#EEF7FB;color:#436679;font-size:9.5px}
+@media(max-width:760px){.participant-card-v112{grid-template-columns:1fr}.participant-fields-v112,.fb-identity-v112,.likert-grid-v112{grid-template-columns:1fr}.progress-grid-v112{grid-template-columns:1fr 1fr!important}.milestone-v112{grid-template-columns:1fr}.feedback-intro-v112{grid-template-columns:1fr}.evidence-grid-v112{grid-template-columns:1fr 1fr}.data-actions-v112{grid-template-columns:1fr!important}}
+@media(max-width:520px){.eval-summary-v112{grid-template-columns:1fr}.progress-hero-v112{grid-template-columns:minmax(0,1fr) 85px;padding:15px}.progress-ring-v112{width:76px;height:76px}.test-tabs-v112{grid-template-columns:1fr!important}.progress-grid-v112{grid-template-columns:1fr!important}.evidence-grid-v112{grid-template-columns:1fr}}
+/* ===== END EVALUASI PEMBELAJARAN v1.12 ===== */
+
+
 /* ===== AUDIT MOBILE 360-430 v1.13 ===== */
 html,body{width:100%;max-width:100%;overflow-x:hidden}
 *{box-sizing:border-box}
@@ -1735,845 +1967,1920 @@ img,svg,video,canvas{max-width:100%}
 }
 /* ===== END AUDIT MOBILE 360-430 v1.13 ===== */
 
-
-
-/* ===== MOBILE HERO SCALE FIX v1.14.1 ===== */
-.hero-mobile-photo{display:none}
-
-@media(max-width:430px){
-  .hero{
-    display:block!important;
-    min-height:0!important;
-    padding:0 0 24px!important;
-    background:
-      linear-gradient(180deg,#0A426D 0%,#073658 100%)!important;
-    overflow:hidden!important;
-  }
-  .hero-mobile-photo{
-    display:block!important;
+/* ===== MOBILE AUDIT v1.13 ===== */
+@media(max-width:650px){
+  html,body{
     width:100%!important;
-    height:auto!important;
     max-width:100%!important;
-    object-fit:contain!important;
-    object-position:center!important;
-    margin:0!important;
+    overflow-x:hidden!important;
   }
-  .hero-inner{
-    width:100%!important;
-    max-width:none!important;
-    padding:20px 16px 0!important;
+
+  body{
+    padding-bottom:calc(62px + env(safe-area-inset-bottom))!important;
+    background:#F4F7F9!important;
   }
-  .hero .eyebrow{
-    font-size:9px!important;
-    letter-spacing:2px!important;
-    margin:0 0 8px!important;
-  }
-  .hero h1{
-    margin:0 0 8px!important;
-    font-size:34px!important;
-    line-height:.95!important;
-  }
-  .hero h2{
-    margin:14px 0 8px!important;
-    font-size:19px!important;
-  }
-  .hero-text{
-    margin:0!important;
-    font-size:11px!important;
-    line-height:1.55!important;
-  }
-  .hero-actions{
-    margin-top:16px!important;
+
+  /* Header global mobile: hilangkan ruang kosong dan pertahankan akses Menu */
+  .topbar{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    position:sticky!important;
+    top:0!important;
+    z-index:1150!important;
+    height:50px!important;
+    min-height:50px!important;
+    padding:0 10px!important;
     gap:8px!important;
+    background:#073B63!important;
+    box-shadow:0 2px 8px rgba(7,47,82,.16)!important;
+    backdrop-filter:none!important;
   }
-  .hero-actions button{
-    width:100%!important;
-    min-height:44px!important;
+
+  .brand{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    min-width:0!important;
+    gap:7px!important;
+    color:#fff!important;
   }
-}
-/* ===== END MOBILE HERO SCALE FIX v1.14.1 ===== */
 
-
-/* ===== TENTANG AKTUALISASI SELARAS RANCANGAN v1.15 ===== */
-.actual-v115{max-width:980px!important}
-.actual-title-v115{
-  padding:22px 23px;margin-bottom:13px;border-radius:18px;
-  background:linear-gradient(135deg,#0B3F6B,#0E6598);color:#fff;
-  box-shadow:0 11px 27px rgba(11,63,107,.13)
-}
-.actual-title-v115>span,.actual-core-v115>span,.actual-idea-v115>span{
-  display:block;margin-bottom:7px;font-size:9px;font-weight:950;letter-spacing:1.5px
-}
-.actual-title-v115>span{color:#FFD45A}
-.actual-title-v115 h2{margin:0;font-size:25px;line-height:1.28;color:#fff}
-.actual-core-grid-v115{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:12px}
-.actual-core-v115{padding:17px;border:1px solid #D7E3EA;border-radius:15px;background:#fff}
-.actual-core-v115.issue{border-left:5px solid #1976D2}
-.actual-core-v115.cause{border-left:5px solid #E4A500}
-.actual-core-v115>span{color:#667F90}
-.actual-core-v115 h3{margin:0 0 7px;color:#173A52;font-size:16px;line-height:1.4}
-.actual-core-v115 p{margin:0!important;color:#718493!important;font-size:11px!important;line-height:1.5!important}
-.actual-idea-v115{
-  padding:18px 20px;margin-bottom:20px;border-radius:16px;
-  background:#FFF8E4;border:1px solid #ECD58B
-}
-.actual-idea-v115>span{color:#8B6500}
-.actual-idea-v115 h2{margin:0 0 7px;color:#4E4020;font-size:20px;line-height:1.32}
-.actual-idea-v115 p{margin:0!important;color:#6A5C3B!important;line-height:1.55!important}
-.actual-structure-v115{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:24px}
-.actual-structure-v115 article{
-  display:grid;grid-template-columns:36px 1fr;gap:9px;align-items:center;
-  min-height:64px;padding:11px 12px;border:1px solid #D8E3EA;border-radius:13px;background:#fff
-}
-.actual-structure-v115 article b{
-  width:34px;height:34px;display:grid;place-items:center;border-radius:10px;
-  background:#EAF4FA;color:#0D6598
-}
-.actual-structure-v115 article span{color:#26485F;font-size:12px;font-weight:850;line-height:1.3}
-
-.actual-activities-v115{display:grid;gap:9px;margin-bottom:25px}
-.actual-activity-v115{
-  overflow:hidden;border:1px solid #D7E3EA;border-radius:14px;background:#fff;
-  box-shadow:0 4px 13px rgba(18,54,83,.045)
-}
-.actual-activity-v115 summary{
-  list-style:none;display:grid;grid-template-columns:42px minmax(0,1fr) 22px;gap:11px;
-  align-items:center;padding:12px 13px;cursor:pointer
-}
-.actual-activity-v115 summary::-webkit-details-marker{display:none}
-.actual-activity-v115 summary>span{
-  width:40px;height:40px;display:grid;place-items:center;border-radius:11px;
-  background:#0F5F93;color:#fff;font-size:11px;font-weight:950
-}
-.actual-activity-v115 summary b{display:block;color:#163A52;font-size:13px;line-height:1.3}
-.actual-activity-v115 summary small{display:block;margin-top:3px;color:#7B8E9A;font-size:9px}
-.actual-activity-v115 summary i{font-style:normal;color:#678092;font-size:18px;transition:.18s}
-.actual-activity-v115[open] summary{background:#F5FAFD;border-bottom:1px solid #E1E9EE}
-.actual-activity-v115[open] summary i{transform:rotate(180deg)}
-.actual-activity-body-v115{padding:13px 16px 15px}
-.actual-activity-body-v115 h4{margin:2px 0 7px;color:#0F5F93;font-size:11px;letter-spacing:.4px}
-.actual-activity-body-v115 ol,.actual-activity-body-v115 ul{margin:0 0 13px;padding-left:20px}
-.actual-activity-body-v115 li{margin:5px 0;color:#536D7F;font-size:11px;line-height:1.5}
-
-.stakeholder-v115 article{position:relative}
-.stakeholder-v115 em{
-  display:block;margin-top:8px;color:#0F669B;font-size:9px;font-style:normal;font-weight:850
-}
-.actual-source-note-v115{
-  display:grid;gap:4px;margin-top:20px;padding:13px 15px;border-radius:12px;
-  border:1px solid #D6E2E9;background:#F7FAFC;color:#687E8D
-}
-.actual-source-note-v115 b{color:#234A63;font-size:11px}
-.actual-source-note-v115 span{font-size:9.5px;line-height:1.45}
-
-@media(max-width:700px){
-  .actual-title-v115{padding:17px}
-  .actual-title-v115 h2{font-size:20px}
-  .actual-core-grid-v115{grid-template-columns:1fr}
-  .actual-structure-v115{grid-template-columns:1fr 1fr}
-  .actual-activity-v115 summary{grid-template-columns:40px minmax(0,1fr) 20px;padding:10px}
-}
-@media(max-width:430px){
-  .actual-title-v115 h2{font-size:17px}
-  .actual-core-v115 h3{font-size:13px}
-  .actual-idea-v115 h2{font-size:15px}
-  .actual-structure-v115{grid-template-columns:1fr}
-  .actual-activity-v115 summary b{font-size:11px}
-  .actual-activity-v115 summary small{font-size:8px}
-  .actual-activity-body-v115{padding:11px 12px 13px}
-  .actual-activity-body-v115 li{font-size:10px}
-}
-/* ===== END TENTANG AKTUALISASI v1.15 ===== */
-
-
-/* ===== TYPOGRAFI KUNCI AKTUALISASI v1.15.1 ===== */
-
-/* Judul rancangan dibuat menjadi fokus utama halaman */
-.actual-title-v115{
-  position:relative;
-  overflow:hidden;
-  padding:30px 32px 31px!important;
-  border-radius:22px!important;
-  background:
-    radial-gradient(circle at 92% 18%,rgba(255,212,90,.22),transparent 28%),
-    linear-gradient(135deg,#08395f 0%,#0b5e91 62%,#0f78aa 100%)!important;
-  border:1px solid rgba(255,255,255,.14)!important;
-  box-shadow:0 16px 36px rgba(8,57,95,.22)!important;
-}
-.actual-title-v115:after{
-  content:"";
-  position:absolute;
-  right:-44px;
-  bottom:-70px;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow:
-    0 0 0 28px rgba(255,255,255,.035),
-    0 0 0 58px rgba(255,255,255,.025);
-  pointer-events:none;
-}
-.actual-title-v115>span{
-  display:inline-flex!important;
-  align-items:center;
-  min-height:30px;
-  padding:7px 12px;
-  margin-bottom:12px!important;
-  border-radius:999px;
-  background:rgba(255,212,90,.14);
-  border:1px solid rgba(255,212,90,.45);
-  color:#FFE48A!important;
-  font-size:12px!important;
-  font-weight:950!important;
-  letter-spacing:2.1px!important;
-  text-transform:uppercase;
-  line-height:1.1;
-}
-.actual-title-v115 h2{
-  position:relative;
-  z-index:1;
-  max-width:900px;
-  margin:0!important;
-  color:#fff!important;
-  font-size:clamp(27px,3vw,40px)!important;
-  line-height:1.18!important;
-  font-weight:950!important;
-  letter-spacing:-.035em!important;
-  text-wrap:balance;
-}
-
-/* Label kunci dibuat lebar dan terbaca sebagai title, bukan catatan kecil */
-.actual-core-v115>span,
-.actual-idea-v115>span{
-  display:flex!important;
-  align-items:center;
-  width:100%;
-  min-height:34px;
-  margin:0 0 12px!important;
-  padding:8px 11px;
-  border-radius:9px;
-  font-size:13px!important;
-  font-weight:950!important;
-  letter-spacing:1.35px!important;
-  line-height:1.15!important;
-  text-transform:uppercase;
-}
-
-.actual-core-v115.issue>span{
-  color:#0B5D97!important;
-  background:#EAF4FB;
-  border-left:5px solid #1976D2;
-}
-.actual-core-v115.cause>span{
-  color:#805A00!important;
-  background:#FFF3D5;
-  border-left:5px solid #E4A500;
-}
-.actual-idea-v115>span{
-  color:#6D4A00!important;
-  background:#FFE7A7;
-  border-left:5px solid #C88A00;
-}
-
-.actual-core-v115{
-  padding:20px!important;
-}
-.actual-core-v115 h3{
-  margin:0 0 9px!important;
-  font-size:19px!important;
-  line-height:1.34!important;
-  font-weight:900!important;
-  letter-spacing:-.02em!important;
-}
-.actual-core-v115 p{
-  font-size:12px!important;
-  line-height:1.55!important;
-}
-
-.actual-idea-v115{
-  padding:22px 24px!important;
-}
-.actual-idea-v115 h2{
-  margin:0 0 9px!important;
-  font-size:24px!important;
-  line-height:1.3!important;
-  font-weight:950!important;
-  letter-spacing:-.025em!important;
-}
-.actual-idea-v115 p{
-  font-size:13px!important;
-  line-height:1.6!important;
-}
-
-@media(max-width:700px){
-  .actual-title-v115{
-    padding:23px 20px 24px!important;
-    border-radius:18px!important;
-  }
-  .actual-title-v115>span{
-    min-height:28px;
-    padding:6px 9px;
+  .brand-badge{
+    display:grid!important;
+    width:30px!important;
+    height:30px!important;
+    border-radius:8px!important;
     font-size:10px!important;
-    letter-spacing:1.5px!important;
+    flex:0 0 30px!important;
   }
-  .actual-title-v115 h2{
-    font-size:24px!important;
+
+  .brand-copy{
+    display:block!important;
+    min-width:0!important;
+  }
+
+  .brand-copy b{
+    display:block!important;
+    font-size:10px!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+  }
+
+  .brand-copy small{
+    display:block!important;
+    font-size:6.5px!important;
+    line-height:1.1!important;
+    letter-spacing:.7px!important;
+    white-space:nowrap!important;
+    margin-top:2px!important;
+  }
+
+  .compact-nav,
+  #desktopMenuButton{
+    display:none!important;
+  }
+
+  #hamburger.hamburger{
+    display:inline-flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    margin-left:auto!important;
+    min-height:34px!important;
+    height:34px!important;
+    padding:6px 9px!important;
+    border:1px solid rgba(255,255,255,.28)!important;
+    border-radius:8px!important;
+    background:rgba(255,255,255,.07)!important;
+    color:#fff!important;
+    font-size:10px!important;
+    font-weight:850!important;
+    line-height:1!important;
+  }
+
+  .page{
+    min-height:calc(100dvh - 50px)!important;
+  }
+
+  /* Header tiap halaman */
+  .subhead{
+    min-height:0!important;
+    padding:12px 10px!important;
+    gap:9px!important;
+    align-items:flex-start!important;
+  }
+
+  .back{
+    width:40px!important;
+    height:40px!important;
+    min-width:40px!important;
+    font-size:21px!important;
+  }
+
+  .subhead>div{
+    min-width:0!important;
+    padding-top:1px!important;
+  }
+
+  .subhead>div>span{
+    font-size:7.5px!important;
+    letter-spacing:1.4px!important;
     line-height:1.2!important;
   }
-  .actual-core-v115>span,
-  .actual-idea-v115>span{
-    min-height:32px;
-    font-size:11px!important;
-    letter-spacing:1.05px!important;
-  }
-  .actual-core-v115 h3{font-size:16px!important}
-  .actual-idea-v115 h2{font-size:19px!important}
-}
 
-@media(max-width:430px){
-  .actual-title-v115{
-    padding:20px 16px 21px!important;
-  }
-  .actual-title-v115 h2{
+  .subhead h1{
+    margin:3px 0 2px!important;
     font-size:20px!important;
-    line-height:1.22!important;
+    line-height:1.08!important;
   }
-  .actual-title-v115>span{
-    width:100%;
-    border-radius:8px;
+
+  .subhead p{
+    margin:0!important;
+    font-size:9.5px!important;
+    line-height:1.32!important;
   }
-  .actual-core-v115,
-  .actual-idea-v115{
-    padding:16px!important;
+
+  .content{
+    width:100%!important;
+    max-width:100%!important;
+    padding:13px 10px 88px!important;
   }
-  .actual-core-v115>span,
-  .actual-idea-v115>span{
-    width:100%;
-    font-size:10px!important;
-    letter-spacing:.8px!important;
+
+  .narrow{
+    max-width:100%!important;
   }
-  .actual-core-v115 h3{font-size:14px!important}
-  .actual-idea-v115 h2{font-size:16px!important}
-}
-/* ===== END TYPOGRAFI KUNCI AKTUALISASI v1.15.1 ===== */
 
-
-/* ===== STRUKTUR SIAP + JEJAK AKTUALISASI v1.16 ===== */
-.drawer-group.guide .drawer-label{
-  font-size:10px!important;
-  letter-spacing:1.65px!important;
-  font-weight:950!important;
-}
-.drawer-group.guide .drawer-item{
-  min-height:58px!important;
-}
-.drawer-group.guide .drawer-copy b{
-  font-size:12px!important;
-  font-weight:900!important;
-  line-height:1.2!important;
-}
-.drawer-group.guide .drawer-copy small{
-  margin-top:3px!important;
-  font-size:8.7px!important;
-  line-height:1.35!important;
-}
-
-/* Cek kesiapan */
-.readiness-v116{max-width:930px!important}
-.readiness-hero-v116{
-  display:grid;grid-template-columns:minmax(260px,42%) minmax(0,1fr);gap:18px;
-  align-items:center;margin-bottom:14px;padding:13px;border:1px solid #D6E3EB;
-  border-radius:18px;background:#fff;box-shadow:0 8px 22px rgba(18,54,83,.07)
-}
-.readiness-hero-v116 img{
-  width:100%;height:auto;max-height:300px;object-fit:contain;border-radius:13px;background:#EDF3F6
-}
-.readiness-hero-v116 span{
-  display:block;color:#0F669B;font-size:9px;font-weight:950;letter-spacing:1.5px;margin-bottom:6px
-}
-.readiness-hero-v116 h2{
-  margin:0 0 8px;color:#173A52;font-size:24px;line-height:1.18;letter-spacing:-.02em
-}
-.readiness-hero-v116 p{margin:0;color:#647C8D;line-height:1.55;font-size:12px}
-.readiness-grid-v116{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.readiness-grid-v116 article{
-  display:grid;grid-template-columns:42px minmax(0,1fr);gap:11px;align-items:start;
-  padding:15px;border:1px solid #D8E3EA;border-radius:14px;background:#fff
-}
-.readiness-grid-v116 article>b{
-  width:38px;height:38px;display:grid;place-items:center;border-radius:11px;
-  background:#0F5F93;color:#fff;font-size:10px;font-weight:950
-}
-.readiness-grid-v116 h3{margin:1px 0 4px;color:#183B53;font-size:14px}
-.readiness-grid-v116 p{margin:0!important;color:#6A7F8E!important;font-size:10.5px!important;line-height:1.45!important}
-.readiness-note-v116{
-  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;
-  margin-top:12px;padding:13px 14px;border-radius:13px;background:#0B426D;color:#EAF4FA
-}
-.readiness-note-v116 b{color:#FFD45A;font-size:11px}
-.readiness-note-v116 span{font-size:10px;line-height:1.4}
-.readiness-note-v116 button{
-  min-height:38px;border:1px solid rgba(255,255,255,.4);border-radius:9px;
-  background:#fff;color:#0B4C78;padding:8px 11px;font-weight:900;font-size:10px
-}
-
-/* Jejak 6 kegiatan */
-.actual-journey-v116{margin:32px 0 30px!important}
-.actual-journey-head-v116{
-  margin-bottom:14px;padding:17px 18px;border-left:5px solid #FFC107;border-radius:12px;
-  background:linear-gradient(135deg,#F8FBFD,#EEF6FA)
-}
-.actual-journey-head-v116>span{
-  display:block;margin-bottom:4px;color:#0E6598;font-size:9px;font-weight:950;letter-spacing:1.55px
-}
-.actual-journey-head-v116 .section-title{
-  margin:0 0 5px!important;padding-left:0!important;color:#153850;font-size:26px!important;font-weight:950
-}
-.actual-journey-head-v116 .section-title:before{display:none!important}
-.actual-journey-head-v116 p{margin:0!important;color:#6C8190!important;font-size:11px!important;line-height:1.5!important}
-.actual-visual-grid-v116{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
-.actual-visual-grid-v116 article{
-  border-radius:15px!important;transition:transform .18s ease,box-shadow .18s ease
-}
-.actual-visual-grid-v116 article:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(18,54,83,.10)}
-.actual-photo-wrap-v116{position:relative;background:#EAF1F5;overflow:hidden}
-.actual-photo-wrap-v116>span{
-  position:absolute;z-index:2;top:9px;left:9px;width:34px;height:34px;display:grid;place-items:center;
-  border-radius:10px;background:#0B4F7D;color:#fff;font-size:10px;font-weight:950;
-  box-shadow:0 4px 12px rgba(0,0,0,.16)
-}
-.actual-visual-grid-v116 .actual-photo{
-  width:100%!important;height:150px!important;object-fit:cover!important;object-position:center!important
-}
-.actual-visual-grid-v116 b{
-  margin-top:12px!important;color:#173A52!important;font-size:13px!important;font-weight:900!important;line-height:1.28!important
-}
-.actual-visual-grid-v116 small{
-  color:#708494!important;font-size:9.5px!important;line-height:1.45!important
-}
-
-/* Dasar Hukum sebagai title struktur resmi */
-#hukum .subhead h1{font-weight:950!important;letter-spacing:-.025em}
-#hukum .subhead>div>span{font-weight:950!important;letter-spacing:1.5px!important}
-
-@media(max-width:800px){
-  .actual-visual-grid-v116{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-}
-@media(max-width:700px){
-  .readiness-hero-v116{grid-template-columns:1fr}
-  .readiness-grid-v116{grid-template-columns:1fr}
-  .readiness-note-v116{grid-template-columns:1fr}
-  .readiness-note-v116 button{width:100%;min-height:44px}
-  .actual-journey-head-v116 .section-title{font-size:22px!important}
-}
-@media(max-width:430px){
-  .actual-visual-grid-v116{grid-template-columns:1fr!important}
-  .actual-visual-grid-v116 .actual-photo{height:auto!important;max-height:250px!important;object-fit:contain!important}
-  .actual-journey-head-v116{padding:14px}
-  .actual-journey-head-v116 .section-title{font-size:19px!important}
-  .actual-journey-head-v116 p{font-size:9.5px!important}
-  .readiness-hero-v116 h2{font-size:18px}
-  .readiness-hero-v116 p{font-size:10px}
-  .readiness-grid-v116 h3{font-size:12px}
-}
-/* ===== END STRUKTUR SIAP + JEJAK v1.16 ===== */
-
-
-/* ===== REVISI VISUAL + DASAR HUKUM ARAHAN KUN v1.17 ===== */
-
-/* FOTO 1: Cek Kesiapan, visual dibuat lebih besar dan dominan */
-.readiness-v116{max-width:1040px!important}
-.readiness-hero-v116{
-  grid-template-columns:minmax(390px,52%) minmax(0,1fr)!important;
-  gap:24px!important;
-  padding:14px!important;
-  align-items:stretch!important;
-}
-.readiness-hero-v116 img{
-  width:100%!important;
-  height:340px!important;
-  max-height:none!important;
-  object-fit:cover!important;
-  object-position:center!important;
-  border-radius:14px!important;
-}
-.readiness-hero-v116>div{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:12px 10px 12px 0;
-}
-.readiness-hero-v116 span{
-  font-size:11px!important;
-  letter-spacing:1.8px!important;
-}
-.readiness-hero-v116 h2{
-  font-size:28px!important;
-  line-height:1.16!important;
-  font-weight:950!important;
-}
-.readiness-hero-v116 p{
-  font-size:12.5px!important;
-  line-height:1.6!important;
-}
-.readiness-grid-v117{
-  grid-template-columns:repeat(2,minmax(0,1fr))!important;
-}
-.readiness-grid-v117 article:last-child{
-  grid-column:1 / -1;
-}
-.readiness-grid-v117 h3{
-  font-size:15px!important;
-  font-weight:900!important;
-}
-.readiness-grid-v117 p{
-  font-size:11px!important;
-}
-
-/* FOTO 2: Delapan langkah komunikasi dibuat jauh lebih terbaca */
-.comm-flow-v110{
-  gap:9px!important;
-  margin:16px 0 14px!important;
-}
-.comm-flow-v110 span{
-  min-height:86px!important;
-  justify-content:center!important;
-  gap:8px!important;
-  padding:12px 8px!important;
-  border-radius:13px!important;
-  font-size:12px!important;
-  line-height:1.2!important;
-  font-weight:900!important;
-  color:#2B4C63!important;
-  box-shadow:0 4px 12px rgba(18,54,83,.045);
-}
-.comm-flow-v110 b{
-  width:35px!important;
-  height:35px!important;
-  font-size:15px!important;
-  font-weight:950!important;
-  background:#DFF0FA!important;
-  color:#0B659A!important;
-}
-.comm-v110>.section-title{
-  font-size:25px!important;
-  font-weight:950!important;
-}
-
-/* FOTO 3: Semua kartu situasi punya bidang foto presisi dan seragam */
-.situations{
-  grid-auto-rows:1fr!important;
-  align-items:stretch!important;
-}
-.situations button{
-  height:100%!important;
-  display:flex!important;
-  flex-direction:column!important;
-  padding:0 0 16px!important;
-}
-.situations .situation-photo{
-  flex:0 0 auto!important;
-  display:block!important;
-  width:calc(100% - 16px)!important;
-  aspect-ratio:4 / 3!important;
-  height:auto!important;
-  object-fit:cover!important;
-  object-position:center center!important;
-  margin:8px 8px 13px!important;
-  border-radius:13px!important;
-  background:#E9F0F5!important;
-}
-.situations button>small{
-  margin-top:0!important;
-}
-.situations button>b{
-  font-weight:900!important;
-}
-
-/* DASAR HUKUM URAIAN TUGAS */
-.duty-law-v117{
-  margin:14px 0 16px;
-  overflow:hidden;
-  border:1px solid #D5E2EA;
-  border-radius:17px;
-  background:#fff;
-  box-shadow:0 8px 21px rgba(18,54,83,.06);
-}
-.duty-law-head-v117{
-  padding:18px 20px;
-  background:linear-gradient(135deg,#0A426D,#0D6798);
-  color:#fff;
-}
-.duty-law-head-v117>span{
-  display:block;
-  margin-bottom:5px;
-  color:#FFD65C;
-  font-size:9.5px;
-  font-weight:950;
-  letter-spacing:1.5px;
-}
-.duty-law-head-v117 h2{
-  margin:0 0 5px;
-  color:#fff;
-  font-size:23px;
-  line-height:1.2;
-  font-weight:950;
-}
-.duty-law-head-v117 p{
-  margin:0!important;
-  color:#DDECF5!important;
-  font-size:11px!important;
-  line-height:1.5!important;
-}
-.duty-law-grid-v117{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:9px;
-  padding:11px;
-  background:#F6F9FB;
-}
-.duty-law-grid-v117 article{
-  display:grid;
-  grid-template-columns:42px minmax(0,1fr);
-  gap:10px;
-  align-items:start;
-  padding:13px;
-  border:1px solid #DCE6EC;
-  border-radius:12px;
-  background:#fff;
-}
-.duty-law-grid-v117 article>b{
-  width:39px;
-  height:39px;
-  display:grid;
-  place-items:center;
-  border-radius:10px;
-  background:#E7F3FA;
-  color:#0D6598;
-  font-size:10px;
-  font-weight:950;
-}
-.duty-law-grid-v117 article.support{
-  border-color:#E9D69C;
-  background:#FFF9E9;
-}
-.duty-law-grid-v117 article.support>b{
-  background:#FFE9A9;
-  color:#765200;
-}
-.duty-law-grid-v117 h3{
-  margin:1px 0 4px;
-  color:#173A52;
-  font-size:13px;
-  line-height:1.35;
-  font-weight:900;
-}
-.duty-law-grid-v117 p{
-  margin:0!important;
-  color:#687F8F!important;
-  font-size:10px!important;
-  line-height:1.5!important;
-}
-
-@media(max-width:900px){
-  .readiness-hero-v116{
-    grid-template-columns:minmax(330px,48%) minmax(0,1fr)!important;
+  .section-title{
+    font-size:20px!important;
+    margin:20px 0 6px!important;
   }
-  .readiness-hero-v116 img{height:320px!important}
-  .comm-flow-v110{grid-template-columns:repeat(4,1fr)!important}
-}
-@media(max-width:700px){
-  .readiness-hero-v116{
-    grid-template-columns:1fr!important;
-    gap:12px!important;
+
+  .section-desc{
+    font-size:12px!important;
+    line-height:1.45!important;
+    margin-bottom:12px!important;
   }
-  .readiness-hero-v116 img{
-    height:auto!important;
-    max-height:none!important;
-    aspect-ratio:4/3!important;
-    object-fit:cover!important;
+
+  /* Beranda */
+  .hero{
+    min-height:398px!important;
+    padding:30px 22px 32px!important;
+    background-position:68% center!important;
   }
-  .readiness-hero-v116>div{padding:4px 4px 8px!important}
-  .readiness-hero-v116 h2{font-size:22px!important}
-  .readiness-grid-v117{grid-template-columns:1fr!important}
-  .readiness-grid-v117 article:last-child{grid-column:auto}
-  .comm-flow-v110{
+
+  .hero-inner{
+    max-width:100%!important;
+  }
+
+  .eyebrow{
+    font-size:9px!important;
+    letter-spacing:2.3px!important;
+  }
+
+  .hero h1{
+    font-size:32px!important;
+    line-height:.92!important;
+    margin:8px 0 6px!important;
+  }
+
+  .hero h2{
+    font-size:20px!important;
+    line-height:1.15!important;
+    margin:18px 0 8px!important;
+  }
+
+  .hero-text{
+    font-size:12.5px!important;
+    line-height:1.48!important;
+  }
+
+  .hero-actions{
+    gap:9px!important;
+    margin-top:18px!important;
+  }
+
+  .hero-actions button{
+    min-height:47px!important;
+    padding:11px 14px!important;
+    border-radius:10px!important;
+  }
+
+  .intro{
+    padding:28px 16px 18px!important;
+  }
+
+  .intro span{
+    font-size:9px!important;
+  }
+
+  .intro h2{
+    font-size:27px!important;
+    line-height:1.16!important;
+    margin:7px 0 12px!important;
+  }
+
+  .intro p{
+    font-size:13px!important;
+    line-height:1.5!important;
+  }
+
+  /* Foto tetap utuh, tetapi tidak mengambil hampir satu layar */
+  .response-hero-v110{
+    padding:9px!important;
+    gap:10px!important;
+  }
+
+  .response-hero-v110 img{
+    height:225px!important;
+    max-height:225px!important;
+    object-fit:contain!important;
+    background:#EDF3F7!important;
+    margin-bottom:0!important;
+  }
+
+  .response-hero-v110 h2{
+    font-size:19px!important;
+  }
+
+  .response-hero-v110 p{
+    font-size:12px!important;
+  }
+
+  .section-banner{
+    max-height:220px!important;
+    object-fit:contain!important;
+    background:#EDF3F7!important;
+    margin-bottom:12px!important;
+  }
+
+  .feedback-intro-v112{
+    padding:9px!important;
+    gap:10px!important;
+  }
+
+  .feedback-intro-v112 img{
+    height:205px!important;
+    max-height:205px!important;
+    object-fit:contain!important;
+    margin:0!important;
+  }
+
+  .learn-photo{
+    height:205px!important;
+    max-height:205px!important;
+    object-fit:contain!important;
+  }
+
+  /* Situasi/komunikasi: 2 kolom pada HP sedang-besar */
+  .situations,
+  .comm-grid{
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
     gap:8px!important;
   }
-  .comm-flow-v110 span{
-    min-height:78px!important;
-    font-size:11.5px!important;
+
+  .situations button,
+  .comm-case{
+    width:100%!important;
+    min-width:0!important;
+    margin:0!important;
+    border-radius:13px!important;
   }
-  .comm-flow-v110 b{
-    width:33px!important;
-    height:33px!important;
+
+  .situation-photo,
+  .comm-photo{
+    margin:6px 6px 9px!important;
+    width:calc(100% - 12px)!important;
+    border-radius:10px!important;
+  }
+
+  .situations button>b,
+  .comm-case>b{
+    font-size:14px!important;
+    margin-left:10px!important;
+    margin-right:10px!important;
+  }
+
+  .situations button>small,
+  .comm-case>small{
+    font-size:10.5px!important;
+    margin-left:10px!important;
+    margin-right:10px!important;
+    line-height:1.35!important;
+  }
+
+  /* Evaluasi dibuat lebih hemat scroll */
+  .eval-summary-v112{
+    grid-template-columns:1fr 1fr!important;
+    gap:8px!important;
+  }
+
+  .eval-summary-v112 article:last-child{
+    grid-column:1/-1!important;
+  }
+
+  .eval-summary-v112 article,
+  .progress-grid-v112 article,
+  .evidence-grid-v112 article{
+    padding:11px!important;
+  }
+
+  .eval-summary-v112 b,
+  .progress-grid-v112 b,
+  .evidence-grid-v112 b{
+    font-size:18px!important;
+  }
+
+  .participant-card-v112{
+    padding:12px!important;
+    gap:10px!important;
+    margin-bottom:10px!important;
+  }
+
+  .progress-grid-v112{
+    grid-template-columns:1fr 1fr!important;
+    gap:8px!important;
+  }
+
+  .progress-grid-v112 article{
+    min-height:104px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+  }
+
+  .progress-hero-v112{
+    padding:13px 14px!important;
+    gap:10px!important;
+    grid-template-columns:minmax(0,1fr) 78px!important;
+  }
+
+  .progress-ring-v112{
+    width:72px!important;
+    height:72px!important;
+  }
+
+  .progress-ring-v112 b{
+    font-size:17px!important;
+  }
+
+  .likert-grid-v112,
+  .fb-identity-v112{
+    gap:8px!important;
+  }
+
+  .feedback-form-v112 select,
+  .feedback-form-v112 input,
+  .feedback-form-v112 textarea{
     font-size:14px!important;
   }
-  .duty-law-grid-v117{grid-template-columns:1fr}
+
+  /* Hukum */
+  .law-warning{
+    grid-template-columns:36px minmax(0,1fr)!important;
+    gap:10px!important;
+    padding:12px!important;
+    margin-bottom:13px!important;
+    border-radius:13px!important;
+  }
+
+  .law-warning-icon{
+    width:34px!important;
+    height:34px!important;
+    border-radius:10px!important;
+    font-size:18px!important;
+  }
+
+  .law-warning b{
+    font-size:15px!important;
+    line-height:1.25!important;
+  }
+
+  .law-warning p{
+    font-size:12px!important;
+    line-height:1.45!important;
+  }
+
+  .law-guide-intro{
+    padding:14px!important;
+    margin:13px 0 10px!important;
+  }
+
+  .law-visual-card img,
+  .law-visual-photo{
+    max-height:225px!important;
+    object-fit:contain!important;
+    background:#EDF3F7!important;
+  }
+
+  /* Drawer dan navigasi bawah konsisten */
+  .mobile-menu.app-drawer{
+    top:0!important;
+    height:100dvh!important;
+    width:min(355px,94vw)!important;
+  }
+
+  .bottom-nav{
+    display:grid!important;
+    visibility:visible!important;
+    opacity:1!important;
+    transform:none!important;
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    z-index:2000!important;
+    grid-template-columns:repeat(5,1fr)!important;
+    height:calc(60px + env(safe-area-inset-bottom))!important;
+    padding-bottom:env(safe-area-inset-bottom)!important;
+    background:rgba(255,255,255,.98)!important;
+    border-top:1px solid #D8E1E9!important;
+    box-shadow:0 -5px 18px rgba(18,54,83,.09)!important;
+  }
+
+  .bottom-nav button{
+    min-width:0!important;
+    min-height:60px!important;
+    height:60px!important;
+    padding:5px 2px!important;
+    gap:1px!important;
+    background:transparent!important;
+    color:#536B7C!important;
+  }
+
+  .bottom-nav span{
+    display:block!important;
+    font-size:17px!important;
+    line-height:1.05!important;
+  }
+
+  .bottom-nav small{
+    display:block!important;
+    font-size:7.5px!important;
+    line-height:1.05!important;
+    font-weight:750!important;
+    white-space:nowrap!important;
+  }
+
+  footer{
+    padding-bottom:76px!important;
+  }
 }
-@media(max-width:430px){
-  .readiness-hero-v116 img{
-    aspect-ratio:4/3!important;
-    object-fit:cover!important;
+
+@media(max-width:370px){
+  .situations,
+  .comm-grid{
+    grid-template-columns:1fr!important;
   }
-  .readiness-hero-v116 span{font-size:9px!important}
-  .readiness-hero-v116 h2{font-size:19px!important}
-  .readiness-hero-v116 p{font-size:10px!important}
-  .comm-flow-v110 span{
-    min-height:74px!important;
-    font-size:11px!important;
+
+  .hero{
+    min-height:385px!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
   }
-  .situations .situation-photo{
-    aspect-ratio:4/3!important;
+
+  .hero h1{
+    font-size:30px!important;
+  }
+
+  .hero h2{
+    font-size:19px!important;
+  }
+
+  .eval-summary-v112{
+    grid-template-columns:1fr!important;
+  }
+
+  .eval-summary-v112 article:last-child{
+    grid-column:auto!important;
+  }
+
+  .progress-grid-v112{
+    grid-template-columns:1fr!important;
+  }
+
+  .brand-copy small{
+    display:none!important;
+  }
+}
+/* ===== END MOBILE AUDIT v1.13 ===== */
+
+/* ===== FIX SHELL MOBILE v1.13.1 ===== */
+@media(max-width:650px){
+  /* Paksa header global benar-benar terlihat. Selector dibuat lebih kuat
+     karena audit v1.13 menunjukkan area header tetap kosong. */
+  body > header.topbar{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    transform:none!important;
+    pointer-events:auto!important;
+    position:sticky!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    z-index:5000!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:48px!important;
+    min-height:48px!important;
+    margin:0!important;
+    padding:0 10px!important;
+    box-sizing:border-box!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:8px!important;
+    overflow:visible!important;
+    background:#073B63!important;
+    color:#fff!important;
+    border:0!important;
+    box-shadow:0 2px 8px rgba(7,47,82,.18)!important;
+  }
+
+  body > header.topbar .brand{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    transform:none!important;
+    pointer-events:auto!important;
+    position:static!important;
+    width:auto!important;
+    max-width:calc(100% - 88px)!important;
+    min-width:0!important;
     height:auto!important;
-    object-fit:cover!important;
+    margin:0!important;
+    padding:0!important;
+    gap:7px!important;
+    align-items:center!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    color:#fff!important;
   }
-  .duty-law-head-v117{padding:15px}
-  .duty-law-head-v117 h2{font-size:18px}
+
+  body > header.topbar .brand-badge{
+    display:grid!important;
+    place-items:center!important;
+    width:30px!important;
+    height:30px!important;
+    min-width:30px!important;
+    flex:0 0 30px!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:8px!important;
+    background:#F7C400!important;
+    color:#073B63!important;
+    font-size:10px!important;
+    font-weight:950!important;
+  }
+
+  body > header.topbar .brand-copy{
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
+    min-width:0!important;
+    overflow:hidden!important;
+    color:#fff!important;
+  }
+
+  body > header.topbar .brand-copy b{
+    display:block!important;
+    margin:0!important;
+    color:#fff!important;
+    font-size:10px!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
+
+  body > header.topbar .brand-copy small{
+    display:block!important;
+    margin-top:2px!important;
+    color:#DCEAF3!important;
+    font-size:6.5px!important;
+    line-height:1.1!important;
+    letter-spacing:.6px!important;
+    white-space:nowrap!important;
+  }
+
+  body > header.topbar .compact-nav,
+  body > header.topbar #desktopMenuButton{
+    display:none!important;
+  }
+
+  body > header.topbar #hamburger{
+    display:inline-flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    transform:none!important;
+    pointer-events:auto!important;
+    position:static!important;
+    width:auto!important;
+    min-width:72px!important;
+    height:34px!important;
+    min-height:34px!important;
+    margin:0!important;
+    padding:6px 9px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:5px!important;
+    border:1px solid rgba(255,255,255,.28)!important;
+    border-radius:8px!important;
+    background:rgba(255,255,255,.08)!important;
+    color:#fff!important;
+    font-size:9.5px!important;
+    font-weight:900!important;
+    line-height:1!important;
+  }
+
+  /* Hilangkan spacer/margin lama yang membuat strip kosong di atas halaman. */
+  body,
+  body > main,
+  body > main > .page{
+    margin-top:0!important;
+    padding-top:0!important;
+  }
+
+  body > main{
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  /* Bottom nav dipaksa konsisten di semua halaman. */
+  body > nav.bottom-nav{
+    display:grid!important;
+    visibility:visible!important;
+    opacity:1!important;
+    transform:none!important;
+    pointer-events:auto!important;
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    top:auto!important;
+    z-index:6000!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:calc(60px + env(safe-area-inset-bottom))!important;
+    min-height:60px!important;
+    margin:0!important;
+    padding:0 4px env(safe-area-inset-bottom)!important;
+    box-sizing:border-box!important;
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    align-items:stretch!important;
+    background:rgba(255,255,255,.98)!important;
+    border-top:1px solid #D8E1E9!important;
+    box-shadow:0 -5px 18px rgba(18,54,83,.10)!important;
+  }
+
+  body > nav.bottom-nav > button{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    transform:none!important;
+    min-width:0!important;
+    width:100%!important;
+    height:60px!important;
+    min-height:60px!important;
+    margin:0!important;
+    padding:5px 2px!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:2px!important;
+    border:0!important;
+    background:transparent!important;
+    color:#536B7C!important;
+  }
+
+  body > nav.bottom-nav > button span{
+    display:block!important;
+    font-size:17px!important;
+    line-height:1!important;
+  }
+
+  body > nav.bottom-nav > button small{
+    display:block!important;
+    max-width:100%!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+    white-space:nowrap!important;
+    font-size:7.5px!important;
+    line-height:1!important;
+    font-weight:800!important;
+  }
+
+  body{
+    padding-bottom:calc(66px + env(safe-area-inset-bottom))!important;
+  }
+
+  .content{
+    padding-bottom:92px!important;
+  }
 }
-/* ===== END REVISI v1.17 ===== */
+
+@media(max-width:370px){
+  body > header.topbar .brand-copy small{
+    display:none!important;
+  }
+  body > header.topbar #hamburger{
+    min-width:66px!important;
+  }
+}
+/* ===== END FIX SHELL MOBILE v1.13.1 ===== */
 
 
-/* ===== PERJELAS DASAR HUKUM SEMUA v1.18 ===== */
-.law-inline-detail{
-  border-width:1px;
-  border-color:#AFCBDD;
-  border-radius:18px;
-  box-shadow:0 12px 28px rgba(18,54,83,.10);
+/* ===== REVISI HUKUM MENTOR v1.14.1 ===== */
+.law-local-primary-v1141{
+  display:grid;
+  grid-template-columns:52px minmax(0,1fr);
+  gap:13px;
+  align-items:start;
+  margin:14px 0 16px;
+  padding:16px;
+  border:1px solid #E9BE4C;
+  border-radius:15px;
+  background:linear-gradient(135deg,#FFFDF7,#FFF6D8);
+  box-shadow:0 6px 16px rgba(89,69,20,.06);
 }
-.law-inline-head{
-  padding:18px 20px 16px;
-  background:linear-gradient(135deg,#0B426D 0%,#0E6598 65%,#1676A8 100%);
+.law-local-primary-no-v1141{
+  width:48px;height:48px;display:grid;place-items:center;border-radius:13px;
+  background:#F6C637;color:#183B52;font-weight:950;font-size:14px;
 }
-.law-inline-kicker{
-  display:block;
-  font-size:11px;
-  font-weight:950;
-  letter-spacing:1.45px;
-  text-transform:uppercase;
-  color:#FFD45A;
+.law-local-primary-kicker-v1141{
+  display:block;margin-bottom:4px;color:#83600A;font-size:8.5px;font-weight:950;letter-spacing:1.1px;
 }
-.law-inline-head h3{
-  margin:7px 0 6px;
-  color:#fff;
-  font-size:30px;
-  line-height:1.17;
-  font-weight:900;
+.law-local-primary-v1141 h2{margin:0 0 5px;color:#453A20;font-size:16px;line-height:1.32}
+.law-local-primary-v1141 p{margin:0 0 6px;color:#655A40;font-size:11px;line-height:1.5}
+.law-local-primary-v1141 small{display:block;color:#7D704F;font-size:9.5px;line-height:1.45}
+@media(max-width:650px){
+  .law-local-primary-v1141{grid-template-columns:40px minmax(0,1fr);gap:10px;padding:12px;margin:11px 0 13px}
+  .law-local-primary-no-v1141{width:38px;height:38px;border-radius:10px;font-size:11px}
+  .law-local-primary-v1141 h2{font-size:14px}
+  .law-local-primary-v1141 p{font-size:10.5px}
 }
-.law-inline-head p{
-  margin:0!important;
-  color:#E3F0F8!important;
-  font-size:15px!important;
-  line-height:1.6!important;
-}
-.law-inline-sections{
-  gap:12px;
-  padding:14px;
-  background:#F6F9FB;
-}
-.law-inline-box{
-  padding:16px 18px;
-  border-radius:14px;
-  border:1px solid #D4E1E8;
-  box-shadow:0 2px 0 rgba(255,255,255,.65) inset;
-}
-.law-inline-box.national,
-.law-inline-box.local,
-.law-inline-box.action{border-left-width:5px}
-.law-inline-box.caution{
-  background:#FFF9E8;
-  border-color:#ECD695;
-}
-.law-inline-label{
-  display:block;
-  margin-bottom:7px;
-  color:#617B8C;
-  font-size:11px;
-  font-weight:950;
-  letter-spacing:1.25px;
-  text-transform:uppercase;
-}
-.law-inline-box strong{
-  display:block;
-  color:#163A52;
-  font-size:21px;
-  line-height:1.35;
-  font-weight:900;
-}
-.law-inline-box p{
-  margin:7px 0 0!important;
-  color:#5E7889!important;
-  font-size:15px!important;
-  line-height:1.68!important;
-}
-.law-inline-box ul{
-  margin:8px 0 0;
-  padding-left:20px;
-  color:#557182;
-  font-size:15px;
-  line-height:1.65;
-}
-.law-inline-box li{margin:6px 0}
-.law-inline-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:10px;
-}
-.law-inline-links a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:36px;
-  padding:8px 12px;
-  border:1px solid #BCD2DF;
-  border-radius:999px;
+/* ===== END REVISI HUKUM MENTOR v1.14.1 ===== */
+
+
+/* ===== KOREKSI MENTOR v1.15 ===== */
+.mentor-legal-v115{
+  margin:14px 0 16px;
+  padding:15px;
+  border:1px solid #D8E3EA;
+  border-radius:15px;
   background:#fff;
-  color:#0C5F93;
-  font-size:12px;
-  font-weight:900;
-  text-decoration:none;
+  box-shadow:0 6px 16px rgba(18,54,83,.05);
+}
+.mentor-legal-head-v115>span,
+.mentor-indicator-head-v115>span{
+  display:block;
+  color:#0D669A;
+  font-size:8.5px;
+  font-weight:950;
+  letter-spacing:1.2px;
+}
+.mentor-legal-head-v115 h2,
+.mentor-indicator-head-v115 h2{
+  margin:4px 0 5px;
+  color:#173A52;
+  font-size:18px;
   line-height:1.25;
 }
-.law-inline-note{
-  padding:13px 16px;
-  border-top:1px solid #D8E5EC;
+.mentor-legal-head-v115 p,
+.mentor-indicator-head-v115 p{
+  margin:0;
+  color:#667C8A;
+  font-size:10.5px;
+  line-height:1.5;
+}
+.mentor-legal-grid-v115{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin-top:11px;
+}
+.mentor-legal-grid-v115 article{
+  padding:12px;
+  border:1px solid #E0E7EC;
+  border-radius:11px;
+  background:#F9FBFC;
+}
+.mentor-legal-grid-v115 article:first-child{
+  border-color:#E8C55E;
+  background:#FFF9E8;
+}
+.mentor-legal-grid-v115 b,
+.mentor-legal-grid-v115 strong{
+  display:block;
+  color:#26475D;
+  line-height:1.35;
+}
+.mentor-legal-grid-v115 strong{
+  margin-top:2px;
+  font-size:10.5px;
+}
+.mentor-legal-grid-v115 p{
+  margin:7px 0 5px;
+  color:#657B89;
+  font-size:10px;
+  line-height:1.5;
+}
+.mentor-legal-grid-v115 small{
+  display:block;
+  color:#7A6F50;
+  font-size:9px;
+  line-height:1.45;
+}
+.mentor-legal-grid-v115 a{
+  display:inline-block;
+  margin-top:4px;
+  color:#0D669A;
+  font-size:9.5px;
+  font-weight:850;
+  text-decoration:none;
+}
+.mentor-legal-note-v115{
+  margin-top:9px;
+  padding:10px 11px;
+  border-left:4px solid #0D6B9E;
+  border-radius:9px;
+  background:#EFF7FB;
+}
+.mentor-legal-note-v115 b{
+  display:block;
+  color:#265269;
+  font-size:9.5px;
+}
+.mentor-legal-note-v115 span{
+  display:block;
+  margin-top:3px;
+  color:#607887;
+  font-size:9.5px;
+  line-height:1.45;
+}
+
+.mentor-test-note-v115{
+  margin:0 0 11px;
+  padding:11px 12px;
+  border-left:4px solid #D6A326;
+  border-radius:10px;
+  background:#FFF8E5;
+}
+.mentor-test-note-v115 b{
+  display:block;
+  color:#73550C;
+  font-size:11px;
+}
+.mentor-test-note-v115 p{
+  margin:4px 0 0;
+  color:#756646;
+  font-size:10px;
+  line-height:1.5;
+}
+
+.mentor-indicator-v115{
+  margin:12px 0;
+  padding:15px;
+  border:1px solid #D6E4EA;
+  border-radius:15px;
+  background:linear-gradient(135deg,#F9FCFD,#EEF7F7);
+}
+.mentor-indicator-grid-v115{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:11px;
+}
+.mentor-indicator-grid-v115 article{
+  padding:11px;
+  border:1px solid #DDE6EB;
+  border-radius:11px;
   background:#fff;
-  color:#6A808F;
-  font-size:13px;
-  line-height:1.6;
 }
-.law-inline-note b{color:#3E5F73}
-@media(max-width:1100px){
-  .law-inline-head h3{font-size:26px}
-  .law-inline-box strong{font-size:19px}
+.mentor-indicator-grid-v115 small{
+  display:block;
+  color:#738792;
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:.8px;
 }
-@media(max-width:800px){
-  .law-inline-head{padding:16px}
-  .law-inline-kicker{font-size:10px}
-  .law-inline-head h3{font-size:24px}
-  .law-inline-head p,
-  .law-inline-box p,
-  .law-inline-box ul{font-size:14px!important}
-  .law-inline-box strong{font-size:18px}
-  .law-inline-label{font-size:10px}
+.mentor-indicator-grid-v115 b{
+  display:block;
+  margin:4px 0 3px;
+  color:#173A52;
+  font-size:18px;
 }
-@media(max-width:600px){
-  .law-inline-detail{border-radius:16px}
-  .law-inline-head{padding:15px 14px}
-  .law-inline-kicker{font-size:9.5px;letter-spacing:1.1px}
-  .law-inline-head h3{margin:6px 0 5px;font-size:22px;line-height:1.2}
-  .law-inline-head p{font-size:14px!important;line-height:1.58!important}
-  .law-inline-sections{gap:10px;padding:10px}
-  .law-inline-box{padding:13px;border-radius:12px}
-  .law-inline-label{margin-bottom:6px;font-size:9.5px}
-  .law-inline-box strong{font-size:17px;line-height:1.32}
-  .law-inline-box p,
-  .law-inline-box ul{font-size:13.5px!important;line-height:1.58!important}
-  .law-inline-links a{min-height:34px;padding:7px 10px;font-size:11.5px}
-  .law-inline-note{padding:11px 12px;font-size:12.5px;line-height:1.55}
+.mentor-indicator-grid-v115 b.up{color:#087148}
+.mentor-indicator-grid-v115 b.down{color:#A44B43}
+.mentor-indicator-grid-v115 span{
+  display:block;
+  color:#758792;
+  font-size:9px;
+  line-height:1.4;
 }
-/* ===== END PERJELAS DASAR HUKUM SEMUA v1.18 ===== */
+.mentor-evidence-v115{
+  margin-top:9px;
+  padding:10px 11px;
+  border-radius:10px;
+  background:#0B5A72;
+  color:#fff;
+}
+.mentor-evidence-v115 b{
+  display:block;
+  font-size:10px;
+}
+.mentor-evidence-v115 span{
+  display:block;
+  margin-top:3px;
+  color:#D9EFF3;
+  font-size:9.5px;
+  line-height:1.45;
+}
+
+@media(max-width:650px){
+  .mentor-legal-v115,
+  .mentor-indicator-v115{padding:12px}
+  .mentor-legal-grid-v115{grid-template-columns:1fr}
+  .mentor-indicator-grid-v115{grid-template-columns:1fr 1fr}
+  .mentor-indicator-grid-v115 article:last-child{grid-column:1/-1}
+}
+@media(max-width:370px){
+  .mentor-indicator-grid-v115{grid-template-columns:1fr}
+  .mentor-indicator-grid-v115 article:last-child{grid-column:auto}
+}
+/* ===== END KOREKSI MENTOR v1.15 ===== */
+
+
+
+/* ===== HEADER STABILIZATION v1.15.2 ===== */
+.mobile-shell-v1151{display:none}
+@media(max-width:650px){
+ html,body{margin:0!important;width:100%!important;max-width:100%!important;overflow-x:clip!important}
+ body{padding-top:48px!important;box-sizing:border-box!important}
+ body>.topbar,body>header.topbar{display:none!important;position:absolute!important;height:0!important;min-height:0!important;max-height:0!important;padding:0!important;margin:0!important;visibility:hidden!important;pointer-events:none!important}
+ body>.mobile-shell-v1151{display:flex!important;position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:1250!important;width:100%!important;height:48px!important;min-height:48px!important;margin:0!important;padding:0 12px!important;box-sizing:border-box!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;background:#073B63!important;color:#fff!important;box-shadow:0 2px 8px rgba(0,0,0,.16)!important;visibility:visible!important;opacity:1!important;transform:none!important}
+ .mobile-shell-brand-v1151{display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important}
+ .mobile-shell-badge-v1151{display:grid!important;place-items:center!important;flex:0 0 30px!important;width:30px!important;height:30px!important;background:#f7c400!important;color:#073b63!important;border-radius:8px!important;font-size:10px!important;font-weight:900!important}
+ .mobile-shell-copy-v1151{display:block!important;min-width:0!important}
+ .mobile-shell-copy-v1151 b{display:block!important;color:#fff!important;font-size:11px!important;white-space:nowrap!important}
+ .mobile-shell-copy-v1151 small{display:block!important;color:#dbeaf5!important;font-size:7px!important;white-space:nowrap!important}
+ .mobile-shell-menu-v1151{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;flex:0 0 auto!important;height:34px!important;min-width:70px!important;padding:0 9px!important;background:#15557b!important;color:white!important;border:1px solid #6b93ab!important;border-radius:8px!important;font-size:11px!important;font-weight:800!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+ .menu-backdrop{z-index:1290!important}
+ .mobile-menu.app-drawer{z-index:1300!important}
+ .bottom-nav{z-index:1100!important}
+ body.menu-open .mobile-shell-v1151,body.menu-open .bottom-nav{pointer-events:none!important}
+ main,.page{margin-top:0!important}
+}
+@media(max-width:370px){.mobile-shell-copy-v1151 small{display:none!important}}
+/* ===== END HEADER STABILIZATION v1.15.2 ===== */
+
+
+/* ===== FOKUS KUN v1.13 ===== */
+.hero-v113 .hero-inner{max-width:800px}
+.dashboard-v113{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:1040px!important}
+.dashboard-v113 .card{min-height:180px!important}.dashboard-v113 .featured-v113{border:2px solid #0D6EA2!important;box-shadow:0 12px 30px rgba(13,110,162,.14)!important}
+.support-v113{max-width:1040px;margin:18px auto 0;padding:15px 18px;border:1px solid #D8E3EA;border-radius:15px;background:#F8FBFD}.support-v113>div:first-child span{color:#718592;font-size:9px;font-weight:950;letter-spacing:1px}.support-v113 h2{margin:3px 0 0;color:#183A51;font-size:17px}.support-buttons-v113{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}.support-buttons-v113 button{padding:9px 12px;border:1px solid #C7D8E2;border-radius:9px;background:#fff;color:#315A72;font-size:10px;font-weight:900}.quote-v113{max-width:1040px!important;margin:14px auto!important}
+.site-credit-v113{max-width:1040px;margin:14px auto 26px;padding:16px;text-align:center;border-top:1px solid #DCE5EA;color:#667D8D}.site-credit-v113 b,.site-credit-v113 strong,.site-credit-v113 span,.site-credit-v113 small{display:block}.site-credit-v113 b{color:#173A52;font-size:15px}.site-credit-v113 span{font-size:10px}.site-credit-v113 strong{margin-top:7px;color:#2F5166;font-size:10.5px}.site-credit-v113 small{font-size:9px}
+.readiness-intro-v113{display:grid;grid-template-columns:240px minmax(0,1fr);gap:15px;align-items:center;margin-bottom:12px;padding:12px;border:1px solid #D9E4EA;border-radius:15px;background:#fff}.readiness-intro-v113 img{width:100%;height:auto;object-fit:contain;border-radius:11px}.readiness-intro-v113 span{font-size:8.5px;font-weight:950;color:#0E6595}.readiness-intro-v113 h2{margin:4px 0;color:#183A52;font-size:18px}.readiness-intro-v113 p{margin:0;color:#6A808E;font-size:10.5px}
+.readiness-list-v113{display:grid;gap:8px;margin-bottom:11px}.readiness-list-v113 article{display:grid;grid-template-columns:34px 1fr;gap:9px;padding:11px 12px;border:1px solid #DCE5EA;border-radius:11px;background:#fff}.readiness-list-v113 i{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;background:#EAF4FA;color:#0D6698;font-style:normal;font-weight:950}.readiness-list-v113 b{display:block;color:#25465B;font-size:11.5px}.readiness-list-v113 p{margin:3px 0 0;color:#6E818D;font-size:10px}
+.comm-sop-note-v113{margin:13px 0;padding:12px 13px;border-left:4px solid #0D6B9E;border-radius:10px;background:#EEF7FB}.comm-sop-note-v113 b{display:block;color:#0D5D8A;font-size:10px}.comm-sop-note-v113 p{margin:3px 0 0;color:#587486;font-size:10.5px}
+.comm-grid-v113,.situations-v113{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.sim-simple-intro-v113{margin-bottom:10px;padding:11px 12px;border-radius:10px;background:#EEF7FB}.sim-simple-tabs-v113{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:10px}.sim-simple-tabs-v113 button{padding:8px;border:1px solid #D7E2E9;border-radius:9px;background:#fff;color:#587181;font-size:9px;font-weight:900}.sim-simple-tabs-v113 button.active{background:#0D679A;color:#fff;border-color:#0D679A}.sim-simple-card-v113{padding:13px;border:1px solid #D8E3EA;border-radius:14px;background:#fff}.sim-simple-card-v113 .sim-hero-image{width:100%;max-height:320px;object-fit:contain;background:#EDF3F6;border-radius:10px}.sim-simple-card-v113>span{display:block;margin-top:9px;color:#0D6698;font-size:8px;font-weight:950}.sim-simple-card-v113 h2{margin:4px 0;color:#183A52;font-size:19px}.sim-better-v113{margin-top:8px;padding:9px;border-left:4px solid #15945F;background:#EEF9F3;border-radius:8px}
+.test-note-v113{margin-bottom:10px;padding:11px;border-left:4px solid #D6A12B;border-radius:9px;background:#FFF8E7}.test-tabs-v113{grid-template-columns:1fr 1fr!important}.participant-fields-v113{margin-bottom:10px}.participant-fields-v113 input{width:100%;box-sizing:border-box;padding:9px;border:1px solid #C9D8E1;border-radius:9px}.quiz-v113{display:grid;gap:8px}.quiz-question-v113{padding:11px;border:1px solid #DCE5EA;border-radius:10px;background:#fff}.quiz-question-v113 legend{font-weight:900;color:#29485C;font-size:11px}.quiz-question-v113 label{display:block;margin-top:6px}.quiz-question-v113 label span{display:block;padding:8px;border:1px solid #E3E9ED;border-radius:8px;background:#FAFCFD;font-size:10px;color:#607887}
+.feedback-simple-v113 .feedback-form{display:grid;gap:9px}.feedback-simple-v113 label>span{display:block;margin-bottom:4px;color:#526D7E;font-size:9.5px;font-weight:850}.feedback-simple-v113 input,.feedback-simple-v113 select,.feedback-simple-v113 textarea{width:100%;box-sizing:border-box;padding:9px;border:1px solid #CBD9E2;border-radius:9px}
+.law-principle-v113{margin-bottom:11px;padding:17px;border-radius:15px;background:linear-gradient(135deg,#0C4F76,#0D7291);color:#fff}.law-principle-v113 span{font-size:8px;font-weight:950;color:#BDECF0}.law-principle-v113 h2{margin:5px 0;color:#fff;font-size:20px}.law-principle-v113 p{margin:0;color:#DDEEF2;font-size:10.5px}.law-list-v113{display:grid;gap:9px}.law-list-v113 article{padding:14px;border:1px solid #D9E4EA;border-radius:12px;background:#fff}.law-list-v113 article>span{color:#7B8D97;font-size:8px;font-weight:950}.law-list-v113 h2{margin:4px 0 2px;color:#193C54;font-size:17px}.law-list-v113 b{color:#466375;font-size:10.5px}.law-list-v113 p{margin:5px 0 0;color:#6E818D;font-size:10px}.law-list-v113 .primary-law-v113{border:2px solid #0D6C9D;background:#F2F9FC}
+@media(max-width:900px){.comm-grid-v113,.situations-v113{grid-template-columns:repeat(2,minmax(0,1fr))!important}.sim-simple-tabs-v113{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.dashboard-v113{grid-template-columns:1fr!important}.readiness-intro-v113{grid-template-columns:1fr}.comm-grid-v113,.situations-v113{grid-template-columns:1fr!important}.sim-simple-tabs-v113{grid-template-columns:1fr 1fr}.support-buttons-v113{flex-direction:column}.support-buttons-v113 button{width:100%}}
+/* ===== END FOKUS KUN v1.13 ===== */
+
+
+/* ===== PRESISI KARTU FOTO v1.13.1 ===== */
+
+.dashboard-v113{
+  gap:16px !important;
+  align-items:stretch !important;
+}
+
+.dashboard-v113 .card{
+  display:grid !important;
+  grid-template-columns:56px minmax(0,1fr) 38px !important;
+  grid-template-rows:172px minmax(96px,auto) !important;
+  grid-template-areas:
+    "photo photo photo"
+    "icon copy arrow" !important;
+  min-height:268px !important;
+  padding:0 !important;
+  gap:0 !important;
+  overflow:hidden !important;
+  align-items:center !important;
+  border-radius:16px !important;
+  transform:none !important;
+}
+
+.dashboard-v113 .card > .card-photo,
+.dashboard-v113 .card > .card-icon,
+.dashboard-v113 .card > .card-copy,
+.dashboard-v113 .card > .card-arrow{
+  position:static !important;
+  inset:auto !important;
+  top:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  left:auto !important;
+  transform:none !important;
+  float:none !important;
+}
+
+.dashboard-v113 .card > img.card-photo{
+  grid-area:photo !important;
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  min-width:0 !important;
+  height:172px !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:cover !important;
+  object-position:center 38% !important;
+  opacity:1 !important;
+  filter:none !important;
+  border:0 !important;
+  border-radius:16px 16px 0 0 !important;
+  background:#E8F0F5 !important;
+  z-index:1 !important;
+}
+
+.dashboard-v113 .card > .card-icon{
+  grid-area:icon !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:38px !important;
+  height:38px !important;
+  margin-left:13px !important;
+  padding:0 !important;
+  font-size:22px !important;
+  line-height:1 !important;
+  z-index:2 !important;
+}
+
+.dashboard-v113 .card > .card-copy{
+  grid-area:copy !important;
+  display:block !important;
+  min-width:0 !important;
+  width:auto !important;
+  margin:0 !important;
+  padding:14px 8px 14px 2px !important;
+  text-align:left !important;
+  z-index:2 !important;
+}
+
+.dashboard-v113 .card > .card-copy b{
+  display:block !important;
+  margin:0 0 5px !important;
+  font-size:16px !important;
+  line-height:1.22 !important;
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+}
+
+.dashboard-v113 .card > .card-copy small{
+  display:block !important;
+  margin:0 !important;
+  font-size:10.5px !important;
+  line-height:1.45 !important;
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+}
+
+.dashboard-v113 .card > .card-arrow{
+  grid-area:arrow !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:28px !important;
+  height:38px !important;
+  margin-right:10px !important;
+  font-size:25px !important;
+  z-index:2 !important;
+}
+
+.dashboard-v113 .card-navy > .card-copy b,
+.dashboard-v113 .card-navy > .card-copy small,
+.dashboard-v113 .card-navy > .card-icon,
+.dashboard-v113 .card-navy > .card-arrow,
+.dashboard-v113 .card-blue > .card-copy b,
+.dashboard-v113 .card-blue > .card-copy small,
+.dashboard-v113 .card-blue > .card-icon,
+.dashboard-v113 .card-blue > .card-arrow{
+  color:#FFFFFF !important;
+}
+
+.dashboard-v113 .card-red > .card-copy b,
+.dashboard-v113 .card-red > .card-icon,
+.dashboard-v113 .card-red > .card-arrow,
+.dashboard-v113 .card-green > .card-copy b,
+.dashboard-v113 .card-green > .card-icon,
+.dashboard-v113 .card-green > .card-arrow,
+.dashboard-v113 .card-cyan > .card-copy b,
+.dashboard-v113 .card-cyan > .card-icon,
+.dashboard-v113 .card-cyan > .card-arrow,
+.dashboard-v113 .card-gold > .card-copy b,
+.dashboard-v113 .card-gold > .card-icon,
+.dashboard-v113 .card-gold > .card-arrow{
+  color:#173A52 !important;
+}
+
+.dashboard-v113 .card-red > .card-copy small,
+.dashboard-v113 .card-green > .card-copy small,
+.dashboard-v113 .card-cyan > .card-copy small,
+.dashboard-v113 .card-gold > .card-copy small{
+  color:#496579 !important;
+}
+
+.comm-grid-v113 .comm-case,
+.situations-v113 > button{
+  overflow:hidden !important;
+}
+
+.comm-grid-v113 img.comm-photo,
+.situations-v113 img.situation-photo{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  height:118px !important;
+  margin:0 0 8px !important;
+  padding:0 !important;
+  object-fit:cover !important;
+  object-position:center 38% !important;
+  border-radius:10px !important;
+  background:#E8F0F5 !important;
+}
+
+.sim-simple-card-v113 img.sim-hero-image{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:390px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  border-radius:12px !important;
+  background:#E8F0F5 !important;
+}
+
+@media(max-width:900px){
+  .dashboard-v113 .card{
+    grid-template-rows:164px minmax(96px,auto) !important;
+  }
+  .dashboard-v113 .card > img.card-photo{
+    height:164px !important;
+  }
+}
+
+@media(max-width:700px){
+  .dashboard-v113{
+    gap:12px !important;
+  }
+  .dashboard-v113 .card{
+    grid-template-columns:52px minmax(0,1fr) 34px !important;
+    grid-template-rows:190px minmax(94px,auto) !important;
+    min-height:284px !important;
+  }
+  .dashboard-v113 .card > img.card-photo{
+    height:190px !important;
+  }
+  .dashboard-v113 .card > .card-copy b{
+    font-size:15px !important;
+  }
+  .comm-grid-v113 img.comm-photo,
+  .situations-v113 img.situation-photo{
+    height:170px !important;
+  }
+}
+
+/* ===== END PRESISI KARTU FOTO v1.13.1 ===== */
+
+
+/* ===== IDENTITAS & CLEANUP KUN v1.13.2 ===== */
+
+.author-profile-v1132{
+  max-width:1040px;
+  margin:14px auto 6px;
+  padding:14px 16px;
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr);
+  gap:13px;
+  align-items:center;
+  border:1px solid #D8E4EB;
+  border-radius:14px;
+  background:linear-gradient(135deg,#F9FCFD 0%,#EEF6FA 100%);
+  box-shadow:0 5px 16px rgba(18,54,83,.05);
+}
+
+.author-mark-v1132{
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:#0C5F8E;
+  color:#FFFFFF;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.6px;
+}
+
+.author-label-v1132{
+  display:block;
+  margin-bottom:3px;
+  color:#0C6596;
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:1px;
+}
+
+.author-info-v1132 h2{
+  margin:0 0 6px;
+  color:#173A52;
+  font-size:17px;
+  line-height:1.2;
+}
+
+.author-meta-v1132{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px 18px;
+}
+
+.author-meta-v1132 p{
+  margin:0;
+  display:flex;
+  gap:6px;
+  align-items:baseline;
+  color:#607988;
+  font-size:9.5px;
+  line-height:1.35;
+}
+
+.author-meta-v1132 p b{
+  color:#385A70;
+  font-size:9px;
+}
+
+.material-merged-v1132{
+  margin:14px 0;
+  padding:14px;
+  border:1px solid #D8E4EA;
+  border-radius:13px;
+  background:#F9FBFC;
+}
+
+.material-head-v1132 span{
+  display:block;
+  color:#0D6698;
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:1px;
+}
+
+.material-head-v1132 h2{
+  margin:4px 0 10px;
+  color:#173A52;
+  font-size:15px;
+  line-height:1.3;
+}
+
+.material-grid-v1132{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+
+.material-grid-v1132 article{
+  padding:10px 11px;
+  border:1px solid #E0E8ED;
+  border-radius:10px;
+  background:#FFFFFF;
+}
+
+.material-grid-v1132 article b{
+  display:block;
+  margin-bottom:3px;
+  color:#294B61;
+  font-size:10.5px;
+}
+
+.material-grid-v1132 article p{
+  margin:0;
+  color:#6C808C;
+  font-size:9.5px;
+  line-height:1.45;
+}
+
+.site-credit-v113 strong{
+  margin-top:7px !important;
+}
+
+.site-credit-v113 small{
+  margin-top:2px !important;
+}
+
+@media(max-width:700px){
+  .author-profile-v1132{
+    margin:10px 12px 5px;
+    grid-template-columns:50px minmax(0,1fr);
+    padding:12px;
+  }
+
+  .author-mark-v1132{
+    width:44px;
+    height:44px;
+    font-size:12px;
+  }
+
+  .author-info-v1132 h2{
+    font-size:15px;
+  }
+
+  .author-meta-v1132{
+    display:grid;
+    gap:4px;
+  }
+
+  .author-meta-v1132 p{
+    display:block;
+  }
+
+  .author-meta-v1132 p b{
+    display:block;
+    margin-bottom:1px;
+  }
+
+  .material-grid-v1132{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== END IDENTITAS & CLEANUP KUN v1.13.2 ===== */
+
+
+/* ===== DASHBOARD BERSIH + IDENTITAS v1.13.3 ===== */
+
+/* Identitas penyusun dibuat lebih kuat tetapi tetap ringkas */
+.author-profile-v1133{
+  max-width:1040px !important;
+  margin:14px auto 10px !important;
+  padding:16px 18px !important;
+  grid-template-columns:64px minmax(0,1fr) !important;
+  gap:15px !important;
+  border:1px solid #CFE0EA !important;
+  background:#FFFFFF !important;
+  box-shadow:0 7px 18px rgba(20,54,80,.07) !important;
+}
+
+.author-mark-v1133{
+  width:56px !important;
+  height:56px !important;
+  border-radius:14px !important;
+  background:#0B5F90 !important;
+  color:#FFFFFF !important;
+  font-size:15px !important;
+  font-weight:950 !important;
+}
+
+.author-info-v1133 .author-label-v1132{
+  color:#0B6598 !important;
+  font-size:8.5px !important;
+  letter-spacing:1.2px !important;
+}
+
+.author-info-v1133 h2{
+  margin:2px 0 2px !important;
+  color:#113A57 !important;
+  font-size:22px !important;
+  line-height:1.1 !important;
+  font-weight:950 !important;
+}
+
+.author-latsar-v1133{
+  margin:0 0 7px !important;
+  color:#617A8A !important;
+  font-size:9.5px !important;
+  font-weight:700 !important;
+}
+
+.author-meta-v1133{
+  gap:6px 22px !important;
+}
+
+.author-meta-v1133 p{
+  color:#4D6A7D !important;
+  font-size:10px !important;
+}
+
+.author-meta-v1133 p b{
+  color:#173F5A !important;
+  font-size:9.5px !important;
+}
+
+/* Dashboard wording lebih natural, bukan catatan revisi */
+.intro-v1133{
+  padding-top:48px !important;
+  padding-bottom:28px !important;
+}
+
+.intro-v1133 span{
+  font-size:9px !important;
+  letter-spacing:1.4px !important;
+}
+
+.intro-v1133 h2{
+  margin-top:7px !important;
+  font-size:29px !important;
+  line-height:1.15 !important;
+}
+
+.intro-v1133 p{
+  max-width:620px !important;
+  margin:11px auto 0 !important;
+  font-size:13px !important;
+  line-height:1.5 !important;
+}
+
+/* Latihan & evaluasi dibuat bersih */
+.support-v1133{
+  padding-top:14px !important;
+  padding-bottom:15px !important;
+}
+
+.support-v1133 > div:first-child span{
+  color:#0B6598 !important;
+  font-size:8.5px !important;
+  letter-spacing:1.1px !important;
+}
+
+.support-v1133 h2{
+  margin:3px 0 0 !important;
+  color:#183D58 !important;
+  font-size:17px !important;
+}
+
+/* Footer global: identitas penyusun menjadi jelas */
+.main-footer-v1133{
+  padding:30px 18px 32px !important;
+  text-align:center !important;
+  background:#073555 !important;
+  color:#FFFFFF !important;
+}
+
+.main-footer-v1133 > *{
+  display:block !important;
+}
+
+.footer-brand-v1133{
+  color:#FFFFFF !important;
+  font-size:18px !important;
+  font-weight:950 !important;
+}
+
+.footer-subtitle-v1133{
+  margin-top:3px !important;
+  color:#D5EAF5 !important;
+  font-size:12px !important;
+}
+
+.footer-author-v1133{
+  max-width:520px !important;
+  margin:18px auto 15px !important;
+  padding:14px 16px !important;
+  border-top:1px solid rgba(255,255,255,.18) !important;
+  border-bottom:1px solid rgba(255,255,255,.18) !important;
+}
+
+.footer-author-v1133 small{
+  display:block !important;
+  margin-bottom:4px !important;
+  color:#8FD1F1 !important;
+  font-size:8.5px !important;
+  font-weight:950 !important;
+  letter-spacing:1.3px !important;
+}
+
+.footer-author-v1133 strong{
+  display:block !important;
+  color:#FFFFFF !important;
+  font-size:19px !important;
+  line-height:1.2 !important;
+  font-weight:950 !important;
+}
+
+.footer-author-v1133 span{
+  display:block !important;
+  margin-top:4px !important;
+  color:#E1EEF5 !important;
+  font-size:10px !important;
+  line-height:1.35 !important;
+}
+
+.footer-version-v1133{
+  color:#A9C7D8 !important;
+  font-size:9px !important;
+}
+
+/* Pastikan tidak ada style lama membuat footer redup */
+.main-footer-v1133 b,
+.main-footer-v1133 strong,
+.main-footer-v1133 span,
+.main-footer-v1133 small{
+  opacity:1 !important;
+  filter:none !important;
+}
+
+@media(max-width:700px){
+  .author-profile-v1133{
+    margin:10px 12px 8px !important;
+    padding:13px !important;
+    grid-template-columns:52px minmax(0,1fr) !important;
+  }
+
+  .author-mark-v1133{
+    width:46px !important;
+    height:46px !important;
+    font-size:12px !important;
+  }
+
+  .author-info-v1133 h2{
+    font-size:18px !important;
+  }
+
+  .intro-v1133{
+    padding:34px 16px 22px !important;
+  }
+
+  .intro-v1133 h2{
+    font-size:24px !important;
+  }
+
+  .footer-author-v1133 strong{
+    font-size:17px !important;
+  }
+}
+
+/* ===== END DASHBOARD BERSIH + IDENTITAS v1.13.3 ===== */
+
+
+/* ===== NOMOR & DRAWER RAPI v1.13.4 ===== */
+
+/* Nomor kartu dashboard 01–06 seragam */
+.dashboard-v113 .card > .card-icon{
+  width:42px !important;
+  height:34px !important;
+  margin-left:12px !important;
+  border-radius:9px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-size:13px !important;
+  line-height:1 !important;
+  font-weight:950 !important;
+  letter-spacing:.4px !important;
+}
+
+/* Kartu gelap */
+.dashboard-v113 .card-navy > .card-icon,
+.dashboard-v113 .card-blue > .card-icon{
+  background:rgba(255,255,255,.15) !important;
+  color:#FFFFFF !important;
+}
+
+/* Kartu terang */
+.dashboard-v113 .card-red > .card-icon,
+.dashboard-v113 .card-green > .card-icon,
+.dashboard-v113 .card-cyan > .card-icon,
+.dashboard-v113 .card-gold > .card-icon{
+  background:#E9F2F7 !important;
+  color:#153E59 !important;
+}
+
+/* DRAWER */
+.drawer-v1134{
+  width:min(420px,92vw) !important;
+  max-width:420px !important;
+  min-width:330px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  background:#F5F9FC !important;
+  overflow:hidden !important;
+}
+
+.drawer-head-v1134{
+  flex:0 0 auto !important;
+  min-height:82px !important;
+  padding:14px 16px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:12px !important;
+  background:#0D4F7D !important;
+  border-bottom:0 !important;
+}
+
+.drawer-brand-v1134{
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  flex:1 1 auto !important;
+}
+
+.drawer-brand-v1134 .drawer-brand-badge{
+  flex:0 0 42px !important;
+  width:42px !important;
+  height:42px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:12px !important;
+  background:#FFC928 !important;
+  color:#073A5B !important;
+  font-size:13px !important;
+  font-weight:950 !important;
+}
+
+.drawer-brand-text-v1134{
+  min-width:0 !important;
+  display:block !important;
+}
+
+.drawer-brand-text-v1134 b{
+  display:block !important;
+  margin:0 !important;
+  color:#FFFFFF !important;
+  font-size:13.5px !important;
+  line-height:1.2 !important;
+  font-weight:950 !important;
+  white-space:nowrap !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
+
+.drawer-brand-text-v1134 small{
+  display:block !important;
+  margin-top:3px !important;
+  color:#C7DFEE !important;
+  font-size:9px !important;
+  line-height:1.25 !important;
+  white-space:nowrap !important;
+}
+
+.drawer-close-v1134{
+  flex:0 0 38px !important;
+  width:38px !important;
+  height:38px !important;
+  display:grid !important;
+  place-items:center !important;
+  padding:0 !important;
+  border:1px solid rgba(255,255,255,.25) !important;
+  border-radius:10px !important;
+  background:#FFFFFF !important;
+  color:#0D4F7D !important;
+  font-size:26px !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  cursor:pointer !important;
+}
+
+.drawer-scroll-v1134{
+  flex:1 1 auto !important;
+  min-height:0 !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  padding:12px !important;
+}
+
+.drawer-group-v1134{
+  width:100% !important;
+  margin:0 0 12px !important;
+  padding:10px !important;
+  box-sizing:border-box !important;
+  border:1px solid #D6E3EB !important;
+  border-radius:14px !important;
+  background:#FFFFFF !important;
+}
+
+.drawer-group-v1134 .drawer-label{
+  margin:0 0 8px !important;
+  padding:0 4px !important;
+  color:#617B8D !important;
+  font-size:8px !important;
+  font-weight:950 !important;
+  letter-spacing:1.25px !important;
+  line-height:1.2 !important;
+}
+
+.drawer-item-v1134{
+  width:100% !important;
+  min-width:0 !important;
+  min-height:64px !important;
+  box-sizing:border-box !important;
+
+  display:grid !important;
+  grid-template-columns:38px minmax(0,1fr) 24px !important;
+  align-items:center !important;
+  gap:10px !important;
+
+  margin:0 !important;
+  padding:9px 8px !important;
+
+  border:0 !important;
+  border-bottom:1px solid #E4EBF0 !important;
+  border-radius:0 !important;
+  background:#FFFFFF !important;
+
+  text-align:left !important;
+  cursor:pointer !important;
+
+  white-space:normal !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
+
+.drawer-item-v1134:last-child{
+  border-bottom:0 !important;
+}
+
+.drawer-item-v1134:hover,
+.drawer-item-v1134:focus{
+  background:#F1F7FB !important;
+}
+
+.drawer-num-v1134{
+  width:34px !important;
+  height:34px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:9px !important;
+  background:#E7F2F8 !important;
+  color:#0D5E8E !important;
+  font-size:11px !important;
+  line-height:1 !important;
+  font-weight:950 !important;
+
+  white-space:nowrap !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
+
+.drawer-num-soft-v1134{
+  background:#F1F4F6 !important;
+  color:#516A7A !important;
+}
+
+.drawer-copy-v1134{
+  display:block !important;
+  min-width:0 !important;
+  width:auto !important;
+  max-width:none !important;
+  overflow:visible !important;
+  text-align:left !important;
+
+  white-space:normal !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+  hyphens:none !important;
+}
+
+.drawer-copy-v1134 b{
+  display:block !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:0 !important;
+
+  color:#173B54 !important;
+  font-size:13px !important;
+  line-height:1.22 !important;
+  font-weight:900 !important;
+
+  white-space:normal !important;
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+  hyphens:none !important;
+}
+
+.drawer-copy-v1134 small{
+  display:block !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:3px 0 0 !important;
+
+  color:#778C99 !important;
+  font-size:9px !important;
+  line-height:1.3 !important;
+
+  white-space:normal !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+  hyphens:none !important;
+}
+
+.drawer-item-v1134 .drawer-arrow{
+  width:24px !important;
+  height:34px !important;
+  display:grid !important;
+  place-items:center !important;
+  margin:0 !important;
+
+  color:#0D78BE !important;
+  font-size:23px !important;
+  line-height:1 !important;
+  font-weight:400 !important;
+}
+
+.drawer-foot-v1134{
+  flex:0 0 auto !important;
+  padding:11px 16px 13px !important;
+  border-top:1px solid #CFDDE6 !important;
+  background:#EAF3F8 !important;
+}
+
+.drawer-foot-v1134 strong,
+.drawer-foot-v1134 span,
+.drawer-foot-v1134 small{
+  display:block !important;
+  margin:0 !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
+
+.drawer-foot-v1134 strong{
+  color:#0D4265 !important;
+  font-size:11px !important;
+  line-height:1.25 !important;
+  font-weight:950 !important;
+}
+
+.drawer-foot-v1134 span{
+  margin-top:2px !important;
+  color:#526F81 !important;
+  font-size:8.5px !important;
+}
+
+.drawer-foot-v1134 small{
+  margin-top:2px !important;
+  color:#758A97 !important;
+  font-size:8px !important;
+  line-height:1.25 !important;
+}
+
+/* Layar sangat sempit: drawer hampir penuh layar, deskripsi dipangkas dari tampilan */
+@media(max-width:430px){
+  .drawer-v1134{
+    width:94vw !important;
+    max-width:94vw !important;
+    min-width:0 !important;
+  }
+
+  .drawer-head-v1134{
+    padding:12px 13px !important;
+  }
+
+  .drawer-brand-text-v1134 b{
+    font-size:12.5px !important;
+  }
+
+  .drawer-brand-text-v1134 small{
+    font-size:8.5px !important;
+  }
+
+  .drawer-scroll-v1134{
+    padding:9px !important;
+  }
+
+  .drawer-group-v1134{
+    padding:8px !important;
+  }
+
+  .drawer-item-v1134{
+    grid-template-columns:36px minmax(0,1fr) 22px !important;
+    gap:8px !important;
+    min-height:56px !important;
+    padding:8px 6px !important;
+  }
+
+  .drawer-copy-v1134 b{
+    font-size:12.5px !important;
+  }
+
+  .drawer-copy-v1134 small{
+    display:none !important;
+  }
+
+  .drawer-foot-v1134{
+    padding:10px 13px !important;
+  }
+}
+
+/* ===== END NOMOR & DRAWER RAPI v1.13.4 ===== */
 

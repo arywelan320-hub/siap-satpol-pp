@@ -172,518 +172,6 @@ const first=location.hash.replace("#","")||"beranda";
 showPage(document.getElementById(first)?first:"beranda",false);
 
 
-/* ===== SIMULASI LAPANGAN v1.11 ===== */
-const SIMULATIONS = {
-  pkl:{
-    number:"01",
-    title:"PKL keberatan ditata",
-    story:"Petugas menyampaikan penataan kepada seorang PKL. Pedagang menjawab, “Saya sudah lama jualan di sini. Kenapa sekarang baru dipermasalahkan?” Nada bicaranya masih terkendali, tetapi ia terlihat keberatan.",
-    task:"Anda menjadi petugas yang pertama berbicara. Apa respons awal yang paling tepat?",
-    options:[
-      {
-        text:"“Bapak harus ikut arahan. Kami sedang menjalankan tugas, jadi tidak perlu diperdebatkan.”",
-        level:"kurang",
-        feedback:"Kalimat ini terlalu cepat menutup ruang komunikasi dan dapat membuat pedagang merasa tidak didengar.",
-        why:"Keberatan masih bisa ditangani melalui komunikasi. Petugas belum perlu mengubah percakapan menjadi adu kewenangan.",
-        pattern:"Dengarkan → jelaskan maksud → beri arahan spesifik.",
-        better:"“Kami paham Bapak sudah lama berjualan di sini. Kami dengar dulu alasannya. Setelah itu kami jelaskan bagian yang perlu ditata.”"
-      },
-      {
-        text:"Dengarkan alasan pedagang, akui bahwa keberatannya sudah didengar, lalu jelaskan kondisi yang perlu ditata dan langkah yang diminta.",
-        level:"baik",
-        feedback:"Ini respons paling sesuai dengan pola komunikasi SIAP SATPOL PP.",
-        why:"Petugas tetap tegas pada masalah, tetapi tidak memperlakukan keberatan sebagai perlawanan.",
-        pattern:"Sapa → dengarkan → beri arahan → tutup dengan langkah berikutnya.",
-        better:"“Baik, kami dengar dulu, Bapak. Setelah itu kami jelaskan bagian yang perlu dirapikan supaya pembicaraannya jelas.”"
-      },
-      {
-        text:"Tinggalkan lokasi agar tidak terjadi perdebatan dan tunggu petugas lain yang berbicara.",
-        level:"cukup",
-        feedback:"Menghindari konflik bisa tepat jika situasi tidak aman, tetapi pada kondisi ini komunikasi masih dapat dilakukan.",
-        why:"Belum ada tanda bahaya yang mengharuskan komunikasi dihentikan.",
-        pattern:"Komunikasi dulu; eskalasi bila komunikasi tidak efektif atau situasi menjadi tidak aman.",
-        better:"Tetap lakukan komunikasi singkat, kemudian dokumentasikan dan koordinasikan bila penolakan berlanjut."
-      }
-    ]
-  },
-
-  bahujalan:{
-    number:"02",
-    title:"Pedagang di bahu jalan menolak imbauan",
-    story:"Barang dagangan mengambil sebagian ruang bahu jalan. Saat diberi imbauan, pedagang menjawab, “Kenapa saya? Di sebelah sana juga banyak yang jualan begini.”",
-    task:"Bagaimana menjaga pembicaraan tetap fokus tanpa terjebak perdebatan tentang pedagang lain?",
-    options:[
-      {
-        text:"“Baik, informasi soal lokasi lain kami catat. Sekarang kami selesaikan dulu kondisi di titik ini dan bagian yang perlu dirapikan.”",
-        level:"baik",
-        feedback:"Respons ini mengakui keberatan tanpa kehilangan fokus pada kondisi yang sedang ditangani.",
-        why:"Petugas tidak perlu membuktikan bahwa orang lain salah atau benar untuk menjelaskan masalah yang ada di depan.",
-        pattern:"Dengarkan keberatan → kembali ke fakta → beri arahan.",
-        better:"Tunjukkan bagian bahu jalan yang menjadi perhatian dan minta penataan yang konkret."
-      },
-      {
-        text:"“Kalau orang lain salah, bukan berarti Bapak boleh salah juga.”",
-        level:"cukup",
-        feedback:"Maksudnya dapat dipahami, tetapi nadanya mudah terdengar menggurui dan memancing perdebatan.",
-        why:"Tujuan komunikasi bukan memenangkan argumen moral.",
-        pattern:"Gunakan fakta kondisi, bukan perbandingan pribadi.",
-        better:"“Lokasi lain kami catat. Untuk titik ini, yang perlu dirapikan adalah bagian yang masuk ke ruang jalan.”"
-      },
-      {
-        text:"“Jangan banyak alasan. Kalau tidak pindah sekarang kami tindak.”",
-        level:"kurang",
-        feedback:"Ancaman sebelum dasar tindakan dan prosedur dipastikan dapat memperburuk situasi.",
-        why:"Tegas tidak sama dengan langsung mengancam.",
-        pattern:"Jelaskan → arahkan → dokumentasikan → koordinasikan bila perlu.",
-        better:"Sampaikan tindakan yang memang dapat dilakukan dan hindari ancaman yang belum memiliki dasar."
-      }
-    ]
-  },
-
-  bbm:{
-    number:"03",
-    title:"Penjual BBM eceran meninggikan suara",
-    story:"Petugas mendatangi lokasi penjualan BBM eceran. Penjual berkata keras, “Kenapa hanya saya yang didatangi? Memangnya saya menimbun?” Beberapa warga mulai memperhatikan.",
-    task:"Apa respons awal yang paling aman dan tidak melampaui kewenangan?",
-    options:[
-      {
-        text:"Balas dengan nada tegas yang lebih keras supaya petugas tidak dianggap lemah.",
-        level:"kurang",
-        feedback:"Nada tinggi dari petugas justru dapat memperbesar ketegangan.",
-        why:"Tegas ditunjukkan lewat isi pesan dan kendali diri, bukan volume suara.",
-        pattern:"Redakan → jelaskan tujuan → dengarkan → catat fakta.",
-        better:"“Kami tidak sedang menyimpulkan Bapak melakukan pelanggaran. Kami sedang mencatat kondisi dan ingin mendengar penjelasan Bapak.”"
-      },
-      {
-        text:"Jelaskan bahwa petugas belum menyimpulkan pelanggaran, dengarkan keterangannya, catat fakta, lalu koordinasikan aspek distribusi/izin bila diperlukan.",
-        level:"baik",
-        feedback:"Respons ini paling aman karena tidak membuat tuduhan dan tetap menjaga fungsi petugas di lapangan.",
-        why:"Persoalan BBM dapat bersinggungan dengan kewenangan sektoral dan pidana.",
-        pattern:"Jelaskan maksud → dengarkan → dokumentasikan → cek kewenangan.",
-        better:"“Kami datang untuk melihat kondisi dan mencatat informasi. Untuk hal yang perlu pemeriksaan lebih lanjut, kami koordinasikan dengan instansi terkait.”"
-      },
-      {
-        text:"Langsung menyatakan bahwa penjualan tersebut pasti melanggar aturan dan barang dapat disita.",
-        level:"kurang",
-        feedback:"Pernyataan ini melampaui informasi yang tersedia dan dapat menciptakan konflik baru.",
-        why:"Petugas tidak boleh mengarang dasar pelanggaran atau kewenangan penyitaan.",
-        pattern:"Fakta dulu → aturan yang sudah dipastikan → koordinasi.",
-        better:"Hindari menyebut pelanggaran, pidana, atau penyitaan sebelum dasar dan kewenangan jelas."
-      }
-    ]
-  },
-
-  sampah:{
-    number:"04",
-    title:"Warga membuang sampah sembarangan",
-    story:"Petugas melihat seorang warga meninggalkan sampah di area publik. Saat diingatkan, ia menjawab, “Cuma sedikit. Yang lain juga buang di sini.”",
-    task:"Bagaimana memberi teguran tanpa mempermalukan tetapi tetap jelas?",
-    options:[
-      {
-        text:"Minta warga mengambil kembali sampahnya, jelaskan tujuan menjaga kebersihan lokasi, dan tetap fokus pada perilaku yang sedang terlihat.",
-        level:"baik",
-        feedback:"Pesan tetap tegas pada tindakan yang perlu diperbaiki tanpa merendahkan orangnya.",
-        why:"Jumlah sampah bukan alasan untuk mengabaikan perilaku yang perlu diperbaiki.",
-        pattern:"Fakta → imbauan spesifik → alasan singkat.",
-        better:"“Mohon bantuannya sampah ini dipindahkan ke tempat yang semestinya supaya area ini tetap bersih.”"
-      },
-      {
-        text:"Foto warga tersebut lalu katakan fotonya akan disebarkan supaya jera.",
-        level:"kurang",
-        feedback:"Mempermalukan warga bukan pendekatan komunikasi yang tepat dan menimbulkan persoalan baru.",
-        why:"Dokumentasi untuk kebutuhan tugas berbeda dengan publikasi untuk mempermalukan.",
-        pattern:"Hormati orangnya, koreksi perilakunya.",
-        better:"Jika dokumentasi diperlukan, gunakan sesuai kebutuhan resmi dan jangan dijadikan ancaman."
-      },
-      {
-        text:"Biarkan saja karena sampahnya sedikit.",
-        level:"cukup",
-        feedback:"Respons ini menghindari konflik tetapi tidak menjalankan fungsi pembinaan.",
-        why:"Imbauan sederhana masih dapat diberikan secara proporsional.",
-        pattern:"Komunikasi singkat dan jelas.",
-        better:"Berikan imbauan singkat tanpa memperpanjang percakapan."
-      }
-    ]
-  },
-
-  ternak:{
-    number:"05",
-    title:"Ternak berkeliaran di dekat jalan",
-    story:"Seekor ternak berada di sisi jalan dan beberapa kali masuk ke badan jalan. Pemiliknya mengatakan, “Biasanya aman, tidak pernah terjadi apa-apa.”",
-    task:"Apa respons awal yang paling tepat?",
-    options:[
-      {
-        text:"Tunjukkan kondisi yang terlihat, minta pemilik mengamankan ternaknya, lalu jelaskan bahwa tindak lanjut lain akan mengikuti aturan dan koordinasi yang berlaku.",
-        level:"baik",
-        feedback:"Respons ini fokus pada risiko nyata tanpa membuat ancaman yang belum memiliki dasar.",
-        why:"Petugas dapat mengkomunikasikan gangguan yang terlihat tanpa mengarang denda atau prosedur penahanan ternak.",
-        pattern:"Fakta → arahan → koordinasi bila berulang.",
-        better:"“Saat ini ternaknya beberapa kali masuk ke badan jalan. Mohon diamankan dulu supaya tidak membahayakan pengguna jalan.”"
-      },
-      {
-        text:"Langsung memberi tahu bahwa ternak akan ditangkap dan pemilik akan didenda.",
-        level:"kurang",
-        feedback:"Tindakan seperti penangkapan atau denda membutuhkan dasar lokal dan prosedur yang jelas.",
-        why:"Kewenangan tidak boleh dibuat berdasarkan kebiasaan atau asumsi.",
-        pattern:"Cek kewenangan sebelum tindakan lanjutan.",
-        better:"Jika gangguan berulang, dokumentasikan dan koordinasikan dengan atasan/desa/OPD terkait."
-      },
-      {
-        text:"Membiarkan karena pemilik sudah mengatakan ternaknya aman.",
-        level:"cukup",
-        feedback:"Penjelasan pemilik perlu didengar, tetapi fakta yang terlihat tetap perlu ditangani.",
-        why:"Mendengarkan tidak berarti mengabaikan risiko objektif.",
-        pattern:"Dengarkan → kembali pada fakta.",
-        better:"Akui penjelasannya, lalu tunjukkan risiko yang sedang terlihat."
-      }
-    ]
-  },
-
-  pelajar:{
-    number:"06",
-    title:"Pelajar berada di luar sekolah saat jam belajar",
-    story:"Beberapa pelajar berada di luar lingkungan sekolah. Ketika ditanya, salah satu berkata, “Kami sudah izin.” Teman-temannya terlihat cemas ketika petugas mendekat.",
-    task:"Apa respons awal yang paling sesuai dengan pendekatan pembinaan dan perlindungan anak?",
-    options:[
-      {
-        text:"Minta mereka berdiri berbaris, foto semuanya, lalu ancam mengirim foto ke media sosial sekolah.",
-        level:"kurang",
-        feedback:"Pendekatan ini mempermalukan anak dan tidak sesuai dengan tujuan pembinaan.",
-        why:"Identitas dan martabat anak perlu dilindungi.",
-        pattern:"Humanis → klarifikasi → koordinasi.",
-        better:"Tanyakan keadaan secara tenang dan verifikasi ke sekolah/orang tua bila memang diperlukan."
-      },
-      {
-        text:"Tanyakan sekolah dan alasan mereka berada di luar, dengarkan penjelasan, lalu verifikasi dengan sekolah tanpa mempermalukan.",
-        level:"baik",
-        feedback:"Respons ini paling sesuai dengan pendekatan pembinaan.",
-        why:"Petugas memperoleh fakta sekaligus menjaga rasa aman dan privasi pelajar.",
-        pattern:"Sapa → klarifikasi → lindungi privasi → koordinasi.",
-        better:"“Kami mau tanya dulu kenapa berada di sini dan apakah pihak sekolah sudah mengetahui.”"
-      },
-      {
-        text:"Langsung menyebut mereka membolos karena berada di luar sekolah.",
-        level:"kurang",
-        feedback:"Petugas belum memiliki cukup informasi untuk memberi label tersebut.",
-        why:"Kesimpulan seharusnya mengikuti klarifikasi fakta.",
-        pattern:"Jangan memberi label sebelum keadaan dipahami.",
-        better:"Gunakan pertanyaan terbuka dan verifikasi."
-      }
-    ]
-  },
-
-  parkir:{
-    number:"07",
-    title:"Juru parkir mempertanyakan teguran",
-    story:"Kendaraan mulai memakan ruang jalan. Juru parkir berkata, “Saya sudah atur baik-baik. Tidak ada masalah.”",
-    task:"Bagaimana merespons tanpa menyerang cara kerja juru parkir?",
-    options:[
-      {
-        text:"“Cara parkir Bapak memang dari awal salah. Makanya jalan jadi kacau.”",
-        level:"kurang",
-        feedback:"Kalimat ini menyerang pribadi/cara kerja dan mudah menutup komunikasi.",
-        why:"Yang perlu dibahas adalah kondisi kendaraan dan ruang jalan.",
-        pattern:"Fokus pada situasi, bukan pribadi.",
-        better:"Tunjukkan titik yang menyempit dan arahkan perubahan yang diperlukan."
-      },
-      {
-        text:"Ulangi teguran berkali-kali sampai juru parkir berhenti membantah.",
-        level:"cukup",
-        feedback:"Mengulang tanpa mendengar biasanya tidak membuat pesan lebih jelas.",
-        why:"Keberatan perlu didengar agar petugas tahu bagian mana yang perlu dijelaskan.",
-        pattern:"Dengarkan → tunjukkan fakta → arahkan.",
-        better:"“Kami lihat bagian ini mulai menyempit. Bisa kendaraan diatur sedikit ke bagian yang lebih aman?”"
-      },
-      {
-        text:"Dengarkan penjelasannya, tunjukkan posisi kendaraan yang menjadi perhatian, lalu berikan arahan konkret dan koordinasikan aspek teknis bila perlu.",
-        level:"baik",
-        feedback:"Respons ini paling tepat karena fokus pada kondisi dan solusi.",
-        why:"Petugas tetap tegas tanpa menilai pribadi juru parkir.",
-        pattern:"Dengarkan → fakta → arahan → koordinasi Dishub/Polri bila diperlukan.",
-        better:"Gunakan kondisi yang terlihat sebagai dasar percakapan."
-      }
-    ]
-  },
-
-  kerumunan:{
-    number:"08",
-    title:"Kerumunan mulai tegang",
-    story:"Beberapa warga berkumpul dan berbicara keras kepada petugas secara bersamaan. Belum ada kekerasan, tetapi percakapan sulit dikendalikan.",
-    task:"Apa respons awal yang paling tepat sebelum situasi berkembang?",
-    options:[
-      {
-        text:"Petugas juga berbicara lebih keras agar suara petugas terdengar dan massa mengetahui siapa yang berwenang.",
-        level:"kurang",
-        feedback:"Menaikkan volume suara dapat mempercepat eskalasi.",
-        why:"Tujuan awal adalah membuat komunikasi kembali terstruktur dan menjaga keselamatan.",
-        pattern:"Redakan → satu komunikator → satu perwakilan berbicara.",
-        better:"“Kami ingin dengar penjelasannya. Mari satu orang dulu yang bicara supaya tidak saling potong.”"
-      },
-      {
-        text:"Gunakan satu petugas sebagai komunikator, minta satu orang menjelaskan, jaga jarak aman, dan koordinasikan bila ketegangan meningkat.",
-        level:"baik",
-        feedback:"Respons ini paling sesuai untuk menjaga komunikasi dan keselamatan.",
-        why:"Struktur percakapan membantu mencegah salah paham dan petugas tetap punya ruang untuk membaca risiko.",
-        pattern:"Amankan → de-eskalasi → dengarkan → koordinasi.",
-        better:"Jika ada ancaman keselamatan, hentikan percakapan rutin dan minta dukungan sesuai prosedur."
-      },
-      {
-        text:"Langsung bubarkan seluruh kerumunan karena suara mereka mulai keras.",
-        level:"cukup",
-        feedback:"Pada kondisi ini belum cukup informasi untuk menyimpulkan bahwa pembubaran adalah langkah yang tepat.",
-        why:"Kritik atau suara keras tidak otomatis berarti situasi sudah menjadi pelanggaran yang harus dibubarkan.",
-        pattern:"Baca risiko dan kewenangan sebelum tindakan.",
-        better:"Mulai dengan de-eskalasi dan koordinasikan jika risiko meningkat."
-      }
-    ]
-  }
-};
-
-const SIM_ORDER=["pkl","bahujalan","bbm","sampah","ternak","pelajar","parkir","kerumunan"];
-
-const SIM_IMAGES={
-  pkl:"assets/visual/m5-01-pkl.webp",
-  bahujalan:"assets/visual/m5-02-bahu-jalan.webp",
-  bbm:"assets/visual/m5-03-bbm.webp",
-  sampah:"assets/visual/m5-04-sampah.webp",
-  ternak:"assets/visual/hukum/hukum-ternak.webp",
-  pelajar:"assets/visual/hukum/hukum-pelajar.webp",
-  parkir:"assets/visual/m5-05-parkir.webp",
-  kerumunan:"assets/visual/m5-06-kerumunan.webp"
-};
-
-const simTitle=document.getElementById("simTitle");
-const simStory=document.getElementById("simStory");
-const simTask=document.getElementById("simTask");
-const simOptions=document.getElementById("simOptions");
-const simFeedback=document.getElementById("simFeedback");
-const simHero=document.getElementById("simHero");
-const simNumber=document.getElementById("simNumber");
-const simStateBadge=document.getElementById("simStateBadge");
-const simDoneCount=document.getElementById("simDoneCount");
-const simMiniProgress=document.getElementById("simMiniProgress");
-const simRetry=document.getElementById("simRetry");
-const simNext=document.getElementById("simNext");
-let currentSim="pkl";
-
-function getSimProgress(){
-  try{
-    const arr=JSON.parse(localStorage.getItem("siap_sim_done")||"[]");
-    return Array.isArray(arr)?arr:[];
-  }catch(e){return []}
-}
-
-function getSimResults(){
-  try{
-    const data=JSON.parse(localStorage.getItem("siap_sim_results")||"{}");
-    return data&&typeof data==="object"?data:{};
-  }catch(e){return {}}
-}
-
-function saveSimResult(key,index,opt){
-  const done=getSimProgress();
-  if(!done.includes(key)){
-    done.push(key);
-    localStorage.setItem("siap_sim_done",JSON.stringify(done));
-  }
-  const results=getSimResults();
-  results[key]={
-    option:index,
-    level:opt.level,
-    timestamp:new Date().toISOString()
-  };
-  localStorage.setItem("siap_sim_results",JSON.stringify(results));
-  updateSimProgressUI();
-  if(typeof updateProgressPage==="function") updateProgressPage();
-}
-
-function updateSimProgressUI(){
-  const done=getSimProgress().filter(x=>SIM_ORDER.includes(x));
-  if(simDoneCount) simDoneCount.textContent=done.length+"/8";
-  if(simMiniProgress) simMiniProgress.style.width=(done.length/8*100)+"%";
-  document.querySelectorAll(".sim-select").forEach(btn=>{
-    btn.classList.toggle("done",done.includes(btn.dataset.sim));
-  });
-  if(simStateBadge){
-    simStateBadge.textContent=done.includes(currentSim)?"Sudah dicoba":"Belum dicoba";
-    simStateBadge.classList.toggle("done",done.includes(currentSim));
-  }
-}
-
-function loadSimulation(key){
-  if(!SIMULATIONS[key]) return;
-  currentSim=key;
-  const s=SIMULATIONS[key];
-
-  document.querySelectorAll(".sim-select").forEach(btn=>{
-    btn.classList.toggle("active",btn.dataset.sim===key);
-  });
-
-  if(simHero&&SIM_IMAGES[key]){
-    simHero.src=SIM_IMAGES[key];
-    simHero.alt=s.title;
-  }
-  if(simNumber) simNumber.textContent=`SKENARIO ${s.number} / 08`;
-  if(simTitle) simTitle.textContent=s.title;
-  if(simStory) simStory.textContent=s.story;
-  if(simTask) simTask.textContent=s.task;
-  if(simOptions) simOptions.innerHTML="";
-  if(simFeedback) simFeedback.classList.add("hidden");
-
-  s.options.forEach((opt,idx)=>{
-    const btn=document.createElement("button");
-    btn.type="button";
-    btn.className="sim-option sim-option-v111";
-    btn.innerHTML=`<span>${String.fromCharCode(65+idx)}</span><p>${opt.text}</p>`;
-
-    btn.addEventListener("click",()=>{
-      document.querySelectorAll(".sim-option").forEach(x=>{
-        x.classList.remove("selected-good","selected-mid","selected-bad");
-      });
-      btn.classList.add(opt.level==="baik"?"selected-good":opt.level==="cukup"?"selected-mid":"selected-bad");
-
-      const title=opt.level==="baik"?"Respons paling tepat":opt.level==="cukup"?"Masih bisa diperbaiki":"Perlu dipikirkan kembali";
-      const icon=opt.level==="baik"?"✓":opt.level==="cukup"?"!":"×";
-
-      document.getElementById("simFeedbackTitle").textContent=title;
-      document.getElementById("simFeedbackIcon").textContent=icon;
-      document.getElementById("simFeedbackText").textContent=opt.feedback;
-      document.getElementById("simWhy").textContent=opt.why;
-      document.getElementById("simPattern").textContent=opt.pattern;
-      document.getElementById("simBetter").textContent=opt.better;
-
-      simFeedback.dataset.level=opt.level;
-      simFeedback.classList.remove("hidden");
-      saveSimResult(key,idx,opt);
-    });
-
-    simOptions.appendChild(btn);
-  });
-
-  updateSimProgressUI();
-}
-
-document.querySelectorAll(".sim-select").forEach(btn=>{
-  btn.addEventListener("click",()=>loadSimulation(btn.dataset.sim));
-});
-
-if(simRetry){
-  simRetry.addEventListener("click",()=>{
-    document.querySelectorAll(".sim-option").forEach(x=>x.classList.remove("selected-good","selected-mid","selected-bad"));
-    simFeedback.classList.add("hidden");
-  });
-}
-
-if(simNext){
-  simNext.addEventListener("click",()=>{
-    const pos=SIM_ORDER.indexOf(currentSim);
-    const next=SIM_ORDER[(pos+1)%SIM_ORDER.length];
-    loadSimulation(next);
-    const panel=document.querySelector(".sim-panel-v111");
-    if(panel) panel.scrollIntoView({behavior:"smooth",block:"start"});
-  });
-}
-
-if(simTitle){
-  loadSimulation("pkl");
-  updateSimProgressUI();
-}
-/* ===== END SIMULASI LAPANGAN v1.11 ===== */
-
-/* ===== PRE/POST TEST v0.9 ===== */
-const QUESTIONS=[
-  {q:"Tujuan utama SIAP SATPOL PP adalah...",o:["Menentukan sanksi di lapangan","Menjadi acuan komunikasi awal yang sederhana dan mudah diakses","Menggantikan arahan pimpinan","Menggantikan seluruh SOP"],a:1},
-  {q:"Komunikasi yang diarahkan dalam SIAP SATPOL PP adalah...",o:["Keras dan cepat","Humanis, persuasif, sopan, dan jelas","Panjang dan sangat formal","Selalu mengalah"],a:1},
-  {q:"Sebelum memberi imbauan kepada PKL, personel sebaiknya...",o:["Langsung memerintah","Mendengar kondisi dan menjelaskan maksud kedatangan","Menghindari percakapan","Membuat ancaman"],a:1},
-  {q:"Jika pedagang di bahu jalan menyampaikan keberatan, personel sebaiknya...",o:["Memotong penjelasannya","Mendengarkan lalu menjelaskan inti arahan secara singkat","Beradu argumen","Meninggalkan lokasi tanpa tindak lanjut"],a:1},
-  {q:"Saat penjual BBM eceran mulai meninggikan suara, respons awal yang lebih tepat adalah...",o:["Ikut meninggikan suara","Jaga nada bicara dan dengarkan keberatan","Menyindir penjual","Membuat pernyataan yang belum dipastikan"],a:1},
-  {q:"Saat menemukan orang membuang sampah sembarangan, komunikasi yang lebih tepat adalah...",o:["Mempermalukan di depan umum","Sampaikan imbauan pada perilakunya dengan sopan dan jelas","Mengabaikan","Merekam lalu menyebarkan"],a:1},
-  {q:"Mengapa contoh kalimat komunikasi perlu dibuat?",o:["Agar semua orang harus berbicara dengan kalimat yang sama persis","Agar personel memiliki acuan bersama yang sederhana dan dapat disesuaikan","Agar petugas tidak perlu memahami situasi","Agar komunikasi menjadi lebih panjang"],a:1},
-  {q:"Jika komunikasi awal tidak lagi efektif dan situasi memanas, personel sebaiknya...",o:["Terus berdebat","Koordinasikan sesuai kebutuhan dan kewenangan","Membuat keputusan sendiri di luar kewenangan","Mengabaikan situasi"],a:1},
-  {q:"Pemanfaatan QR Code dalam gagasan SIAP SATPOL PP ditujukan untuk...",o:["Membuat tampilan lebih ramai","Memudahkan akses cepat melalui HP","Menggantikan isi panduan","Menyimpan data pribadi masyarakat"],a:1},
-  {q:"Masukan personel setelah uji coba digunakan untuk...",o:["Menentukan siapa yang paling baik","Mencatat kekurangan dan menyempurnakan panduan","Menghapus seluruh materi","Menggantikan arahan mentor"],a:1}
-];
-
-let testMode="pre";
-const quizForm=document.getElementById("quizForm");
-const submitQuiz=document.getElementById("submitQuiz");
-
-function renderQuiz(){
-  quizForm.innerHTML="";
-  QUESTIONS.forEach((item,i)=>{
-    const wrap=document.createElement("article");
-    wrap.className="quiz-question";
-    wrap.innerHTML=`<h3><span>${i+1}</span>${item.q}</h3>`;
-    const opts=document.createElement("div");
-    opts.className="quiz-options";
-    item.o.forEach((txt,j)=>{
-      const id=`${testMode}_${i}_${j}`;
-      opts.innerHTML+=`<label for="${id}"><input id="${id}" type="radio" name="q${i}" value="${j}"><span>${txt}</span></label>`;
-    });
-    wrap.appendChild(opts);
-    quizForm.appendChild(wrap);
-  });
-}
-
-function updateScoreSummary(){
-  const pre=localStorage.getItem("siap_pre_score");
-  const post=localStorage.getItem("siap_post_score");
-  document.getElementById("preScoreDisplay").textContent=pre!==null?pre+"/100":"Belum ada";
-  document.getElementById("postScoreDisplay").textContent=post!==null?post+"/100":"Belum ada";
-  if(pre!==null && post!==null){
-    const d=Number(post)-Number(pre);
-    document.getElementById("deltaDisplay").textContent=(d>0?"+":"")+d+" poin";
-    document.getElementById("deltaDisplay").className=d>0?"delta-positive":d<0?"delta-negative":"";
-  } else {
-    document.getElementById("deltaDisplay").textContent="-";
-  }
-}
-
-document.querySelectorAll(".test-tab").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelectorAll(".test-tab").forEach(x=>x.classList.remove("active"));
-    btn.classList.add("active");
-    testMode=btn.dataset.test;
-    document.getElementById("testTitle").textContent=testMode==="pre"?"Pre-test":"Post-test";
-    document.getElementById("testIntro").textContent=testMode==="pre"
-      ?"Kerjakan sebelum mempelajari materi. Jawab sesuai pemahaman saat ini. Hasil akan disimpan pada perangkat ini."
-      :"Kerjakan setelah mempelajari SIAP SATPOL PP. Gunakan pemahaman yang sudah diperoleh.";
-    submitQuiz.textContent=testMode==="pre"?"Simpan Hasil Pre-test":"Simpan Hasil Post-test";
-    document.getElementById("quizResult").classList.add("hidden");
-    renderQuiz();
-  });
-});
-
-submitQuiz.addEventListener("click",()=>{
-  let correct=0;
-  let answered=0;
-  QUESTIONS.forEach((item,i)=>{
-    const selected=quizForm.querySelector(`input[name="q${i}"]:checked`);
-    if(selected){
-      answered++;
-      if(Number(selected.value)===item.a)correct++;
-    }
-  });
-  if(answered<QUESTIONS.length){
-    alert(`Masih ada ${QUESTIONS.length-answered} soal yang belum dijawab.`);
-    return;
-  }
-  const score=correct*10;
-  localStorage.setItem(testMode==="pre"?"siap_pre_score":"siap_post_score",String(score));
-  localStorage.setItem(testMode==="pre"?"siap_pre_time":"siap_post_time",new Date().toISOString());
-  document.getElementById("quizScore").textContent=`${score}/100`;
-  document.getElementById("quizMessage").textContent=testMode==="pre"
-    ?"Nilai awal sudah tersimpan. Pelajari materi, gunakan simulasi, lalu kerjakan post-test."
-    :score>=80?"Pemahaman sudah cukup baik. Tetap gunakan panduan sesuai kondisi dan kewenangan.":"Masih ada bagian yang perlu diperkuat. Buka kembali Panduan Komunikasi dan Simulasi Lapangan.";
-  document.getElementById("quizResult").classList.remove("hidden");
-  updateScoreSummary();
-  document.getElementById("quizResult").scrollIntoView({behavior:"smooth",block:"center"});
-});
-
-if(quizForm){
-  renderQuiz();
-  updateScoreSummary();
-}
 
 
 /* ===== MATERI BELAJAR v1.0 ===== */
@@ -782,106 +270,6 @@ document.querySelectorAll(".learn-card").forEach(btn=>{
 if(document.getElementById("closeLearnDetail")){
   document.getElementById("closeLearnDetail").addEventListener("click",()=>learnDetail.classList.add("hidden"));
 }
-
-/* ===== PROGRESS TRACKING v1.0 ===== */
-
-function updateProgressPage(){
-  const pre=localStorage.getItem("siap_pre_score");
-  const post=localStorage.getItem("siap_post_score");
-  const sims=getSimProgress();
-
-  const elPre=document.getElementById("progressPre");
-  if(!elPre)return;
-  elPre.textContent=pre!==null?pre+"/100":"Belum ada";
-  document.getElementById("progressPost").textContent=post!==null?post+"/100":"Belum ada";
-
-  if(pre!==null && post!==null){
-    const d=Number(post)-Number(pre);
-    document.getElementById("progressDelta").textContent=(d>0?"+":"")+d+" poin";
-  }else document.getElementById("progressDelta").textContent="-";
-
-  document.getElementById("progressSim").textContent=Math.min(sims.filter(x=>SIM_ORDER.includes(x)).length,8)+"/8";
-
-  let done=0;
-  if(pre!==null)done+=25;
-  if(sims.length>0)done+=Math.round((Math.min(sims.filter(x=>SIM_ORDER.includes(x)).length,8)/8)*25);
-  if(post!==null)done+=35;
-  if(localStorage.getItem("siap_feedback"))done+=15;
-  done=Math.min(done,100);
-
-  document.getElementById("progressBar").style.width=done+"%";
-  document.getElementById("progressPercent").textContent=done+"%";
-
-  let msg="Mulai dari pre-test, pelajari materi, coba simulasi, lalu kerjakan post-test.";
-  if(done>=100)msg="Progres lengkap. Data pribadi di perangkat ini sudah mencakup pre-test, simulasi, post-test, dan feedback.";
-  else if(post!==null)msg="Post-test sudah selesai. Lengkapi feedback untuk menutup rangkaian pembelajaran.";
-  else if(sims.filter(x=>SIM_ORDER.includes(x)).length>=6)msg="Simulasi sudah cukup banyak dicoba. Setelah materi dipahami, lanjutkan ke post-test.";
-  document.getElementById("progressMessage").textContent=msg;
-}
-
-/* ===== FEEDBACK v1.0 ===== */
-const feedbackForm=document.getElementById("feedbackForm");
-if(feedbackForm){
-  feedbackForm.addEventListener("submit",e=>{
-    e.preventDefault();
-    const data={
-      ease:document.getElementById("fbEase").value,
-      help:document.getElementById("fbHelp").value,
-      best:document.getElementById("fbBest").value,
-      note:document.getElementById("fbNote").value.trim(),
-      time:new Date().toISOString()
-    };
-    localStorage.setItem("siap_feedback",JSON.stringify(data));
-    document.getElementById("feedbackSaved").classList.remove("hidden");
-    updateProgressPage();
-  });
-}
-updateProgressPage();
-
-
-/* ===== DATA & GOOGLE SHEET v1.1 ===== */
-const SIAP_WEBAPP_URL=(window.SIAP_CONFIG&&window.SIAP_CONFIG.GOOGLE_SHEET_WEBAPP_URL||"").trim();
-function collectSiapData(){
-  return {
-    type:"snapshot",
-    timestamp:new Date().toISOString(),
-    pre_score:localStorage.getItem("siap_pre_score"),
-    pre_time:localStorage.getItem("siap_pre_time"),
-    post_score:localStorage.getItem("siap_post_score"),
-    post_time:localStorage.getItem("siap_post_time"),
-    simulations:(()=>{try{return JSON.parse(localStorage.getItem("siap_sim_done")||"[]")}catch(e){return []}})(),
-    feedback:(()=>{try{return JSON.parse(localStorage.getItem("siap_feedback")||"null")}catch(e){return null}})()
-  };
-}
-async function sendToSheet(payload){
-  if(!SIAP_WEBAPP_URL) throw new Error("URL Google Sheet belum diatur");
-  const res=await fetch(SIAP_WEBAPP_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)});
-  if(!res.ok) throw new Error("Gagal mengirim data");
-  return res.text();
-}
-function refreshSheetStatus(){
-  const dot=document.querySelector("#sheetStatus .status-dot");
-  const txt=document.getElementById("sheetStatusText");
-  if(!txt)return;
-  if(SIAP_WEBAPP_URL){txt.textContent="Terhubung. Data dapat dikirim ke rekap Google Sheet.";dot&&dot.classList.add("connected")}
-  else{txt.textContent="Belum terhubung. Data masih tersimpan pada perangkat ini.";dot&&dot.classList.remove("connected")}
-}
-const exportBtn=document.getElementById("exportLocalData");
-if(exportBtn) exportBtn.addEventListener("click",()=>{
-  const blob=new Blob([JSON.stringify(collectSiapData(),null,2)],{type:"application/json"});
-  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="siap-satpol-pp-rekap-perangkat.json";a.click();URL.revokeObjectURL(a.href);
-});
-const syncBtn=document.getElementById("syncAllData");
-if(syncBtn) syncBtn.addEventListener("click",async()=>{
-  const old=syncBtn.textContent;syncBtn.disabled=true;syncBtn.textContent="Mengirim...";
-  try{await sendToSheet(collectSiapData());syncBtn.textContent="Data terkirim ✓"}
-  catch(e){syncBtn.textContent=SIAP_WEBAPP_URL?"Gagal mengirim":"Google Sheet belum terhubung"}
-  setTimeout(()=>{syncBtn.disabled=false;syncBtn.textContent=old},2200);
-});
-refreshSheetStatus();
-
-console.log("SIAP SATPOL PP v1.14 aktif");
-
 
 /* ===== MENU AKTIF v1.7.2 ===== */
 (function(){
@@ -1069,7 +457,7 @@ console.log("SIAP SATPOL PP v1.14 aktif");
         ["Permendagri Nomor 26 Tahun 2020","Rujukan penyelenggaraan Trantibum dan pelindungan masyarakat.",links.perm26]
       ],
       local:[
-        ["Perda Lembata Nomor 12 Tahun 2006","Pernah disebut sebagai dasar penertiban PKL di Lewoleba. Status berlaku dan pasal yang akan dipakai harus diverifikasi kembali melalui JDIH/Bagian Hukum.",links.jdih,true]
+        ["Perda Kabupaten Lembata Nomor 12 Tahun 2012 tentang Ketertiban Umum","Pernah disebut sebagai dasar penertiban PKL di Lewoleba. Status berlaku dan pasal yang akan dipakai harus diverifikasi kembali melalui JDIH/Bagian Hukum.",links.jdih,true]
       ],
       action:["Utamakan imbauan dan komunikasi persuasif.","Pastikan lokasi memang termasuk ruang yang dilarang/dibatasi.","Penertiban atau penyitaan hanya berdasarkan aturan dan prosedur yang sudah diverifikasi."],
       extra:[["Konteks penertiban PKL Lewoleba 2022",links.pklCase]]
@@ -1254,3 +642,132 @@ document.addEventListener("click",e=>{
   }
 });
 /* ===== END DYNAMIC NAV v1.10 ===== */
+
+
+
+
+
+/* ===== KOREKSI MENTOR v1.15 ===== */
+(function(){
+  function parseHistory(){
+    try{
+      const arr=JSON.parse(localStorage.getItem("siap_test_history_v112")||"[]");
+      return Array.isArray(arr)?arr:[];
+    }catch(e){return []}
+  }
+
+  function latest(mode){
+    return [...parseHistory()].reverse().find(x=>x && x.mode===mode) || null;
+  }
+
+  function refreshMentorIndicatorV115(){
+    const pre=latest("pre");
+    const post=latest("post");
+    const p=document.getElementById("mentorPreV115");
+    const q=document.getElementById("mentorPostV115");
+    const d=document.getElementById("mentorDeltaV115");
+
+    if(p) p.textContent=pre ? pre.score+"/100" : "Belum ada";
+    if(q) q.textContent=post ? post.score+"/100" : "Belum ada";
+
+    if(d){
+      if(pre && post){
+        const delta=Number(post.score)-Number(pre.score);
+        d.textContent=(delta>0?"+":"")+delta+" poin";
+        d.classList.toggle("up",delta>0);
+        d.classList.toggle("down",delta<0);
+      }else{
+        d.textContent="-";
+        d.classList.remove("up","down");
+      }
+    }
+  }
+
+  document.addEventListener("click",function(e){
+    if(e.target.closest('[data-page="progress"],#submitQuiz,.test-tab')){
+      setTimeout(refreshMentorIndicatorV115,60);
+    }
+  },true);
+
+  window.addEventListener("hashchange",()=>setTimeout(refreshMentorIndicatorV115,50));
+  window.addEventListener("storage",refreshMentorIndicatorV115);
+  refreshMentorIndicatorV115();
+  window.refreshMentorIndicatorV115=refreshMentorIndicatorV115;
+})();
+/* ===== END KOREKSI MENTOR v1.15 ===== */
+
+
+/* ===== FINAL MOBILE SHELL v1.15.1 ===== */
+(function(){
+  const btn=document.getElementById("shellMenuV1151");
+  if(!btn) return;
+
+  btn.addEventListener("click",function(){
+    const old=document.getElementById("hamburger") || document.getElementById("desktopMenuButton");
+    if(old){
+      old.click();
+      return;
+    }
+
+    const menu=document.getElementById("mobileMenu");
+    const backdrop=document.getElementById("menuBackdrop");
+    if(menu){
+      menu.classList.add("open");
+      menu.setAttribute("aria-hidden","false");
+      document.body.classList.add("menu-open");
+    }
+    if(backdrop){
+      backdrop.classList.add("show","open");
+      backdrop.setAttribute("aria-hidden","false");
+    }
+  });
+})();
+/* ===== END FINAL MOBILE SHELL v1.15.1 ===== */
+
+
+/* ===== SIMULASI SEDERHANA v1.13 ===== */
+(function(){
+  const SIMS={
+    pkl:{n:"01",title:"PKL keberatan ditata",story:"Pedagang berkata, “Saya sudah lama jualan di sini. Kenapa sekarang baru ditegur?”",img:"assets/visual/m2-01-pkl.webp",opts:[["kurang","“Tidak perlu banyak alasan. Ikuti saja arahan petugas.”","Terlalu cepat menutup komunikasi.","“Kami dengar dulu keberatannya, lalu kami jelaskan bagian yang perlu ditata.”"],["baik","Dengarkan keberatan, lalu jelaskan bagian yang perlu ditata.","Paling sesuai dengan komunikasi humanis dan persuasif.","“Kami paham Bapak sudah lama di sini. Mari kita lihat dulu bagian yang perlu dirapikan.”"],["cukup","Tinggalkan lokasi agar tidak terjadi perdebatan.","Bisa diperlukan jika situasi tidak aman, tetapi kondisi ini masih bisa dikomunikasikan.","Tetap komunikasikan maksud secara singkat lalu koordinasikan bila penolakan berlanjut."]]},
+    bahujalan:{n:"02",title:"Pedagang di bahu jalan",story:"Pedagang berkata, “Orang lain juga jualan di sini. Kenapa saya yang ditegur?”",img:"assets/visual/m2-02-bahu-jalan.webp",opts:[["baik","Akui informasi tentang pedagang lain, lalu kembali pada kondisi di titik yang sedang ditangani.","Tetap fokus tanpa mengabaikan keberatan.","“Lokasi lain kami catat. Untuk titik ini, bagian yang perlu dirapikan adalah yang mengganggu akses.”"],["cukup","“Kalau orang lain salah, bukan berarti Bapak boleh salah.”","Mudah terdengar menggurui.","Fokuskan pada akses dan keselamatan."],["kurang","“Kalau tidak pindah sekarang kami tindak.”","Ancaman sebelum dasar tindakan dipastikan dapat memperburuk situasi.","Jelaskan kondisi, arahkan perbaikan, lalu koordinasikan."]]},
+    bbm:{n:"03",title:"Penjual BBM eceran",story:"Penjual berkata keras, “Kenapa hanya saya? Memangnya saya menimbun?”",img:"assets/visual/m2-03-bbm-eceran.webp",opts:[["kurang","Langsung menyatakan penjualan itu pasti melanggar aturan.","Belum cukup fakta untuk membuat kesimpulan.","Hindari tuduhan dan catat kondisi yang terlihat."],["baik","Jelaskan bahwa petugas sedang mencatat kondisi, dengarkan penjelasan, lalu koordinasikan bila menyangkut kewenangan teknis lain.","Menjaga batas kewenangan.","“Kami belum menyimpulkan pelanggaran. Kami sedang melihat kondisi dan mencatat informasi.”"],["cukup","Mengakhiri percakapan karena penjual mulai meninggikan suara.","Belum tentu perlu jika situasi masih aman.","Redakan dulu dan gunakan kalimat singkat."]]},
+    sampah:{n:"04",title:"Sampah sembarangan",story:"Warga berkata, “Cuma sedikit. Yang lain juga buang di sini.”",img:"assets/visual/m2-04-sampah.webp",opts:[["baik","Minta warga memperbaiki perilakunya dan jelaskan dampak kebersihan tanpa mempermalukan.","Fokus pada perilaku yang perlu diperbaiki.","“Mohon bantuannya sampah ini dipindahkan ke tempat yang semestinya.”"],["kurang","Foto warga lalu ancam menyebarkan foto agar jera.","Mempermalukan bukan pendekatan pembinaan.","Dokumentasi resmi tidak digunakan sebagai ancaman."],["cukup","Membiarkan karena sampahnya sedikit.","Fungsi imbauan tidak berjalan.","Berikan imbauan singkat dan proporsional."]]},
+    parkir:{n:"05",title:"Juru parkir mempertanyakan teguran",story:"Juru parkir berkata, “Saya sudah atur baik-baik. Tidak ada masalah.”",img:"assets/visual/m2-05-juru-parkir.webp",opts:[["kurang","“Cara parkir Bapak memang salah dari awal.”","Menyerang cara kerja orangnya, bukan kondisi.","Tunjukkan posisi kendaraan yang menjadi perhatian."],["baik","Dengarkan penjelasan, tunjukkan posisi kendaraan yang mengganggu, lalu beri arahan konkret.","Fokus pada kondisi dan solusi.","“Kami lihat bagian ini mulai menyempit. Bisa kendaraan diatur sedikit ke bagian yang lebih aman?”"],["cukup","Ulangi teguran yang sama sampai juru parkir berhenti membantah.","Mengulang tanpa mendengar tidak membuat pesan lebih jelas.","Dengarkan dulu lalu kembali ke fakta."]]}
+  };
+  const ORDER=["pkl","bahujalan","bbm","sampah","parkir"];let current="pkl";const $=id=>document.getElementById(id);
+  function load(key){
+    if(!SIMS[key])return;current=key;const s=SIMS[key];
+    document.querySelectorAll(".sim-select").forEach(b=>b.classList.toggle("active",b.dataset.sim===key));
+    if($("simHero")){$("simHero").src=s.img;$("simHero").alt=s.title}
+    if($("simNumber"))$("simNumber").textContent=`SKENARIO ${s.n} / 05`;
+    if($("simTitle"))$("simTitle").textContent=s.title;if($("simStory"))$("simStory").textContent=s.story;
+    if($("simOptions")){$("simOptions").innerHTML="";s.opts.forEach((o,i)=>{const b=document.createElement("button");b.type="button";b.className="sim-option";b.innerHTML=`<span>${String.fromCharCode(65+i)}</span><p>${o[1]}</p>`;b.addEventListener("click",()=>{document.querySelectorAll(".sim-option").forEach(x=>x.classList.remove("selected-good","selected-mid","selected-bad"));b.classList.add(o[0]==="baik"?"selected-good":o[0]==="cukup"?"selected-mid":"selected-bad");$("simFeedbackTitle").textContent=o[0]==="baik"?"Respons paling tepat":o[0]==="cukup"?"Masih bisa diperbaiki":"Perlu dipikirkan kembali";$("simFeedbackText").textContent=o[2];$("simBetter").textContent=o[3];$("simFeedback").classList.remove("hidden")});$("simOptions").appendChild(b)})}
+    $("simFeedback")?.classList.add("hidden");
+  }
+  document.querySelectorAll(".sim-select").forEach(b=>b.addEventListener("click",()=>load(b.dataset.sim)));
+  $("simNext")?.addEventListener("click",()=>load(ORDER[(ORDER.indexOf(current)+1)%ORDER.length]));
+  if($("simTitle"))load("pkl");
+})();
+/* ===== END SIMULASI SEDERHANA v1.13 ===== */
+
+
+
+/* ===== EVALUASI SEDERHANA v1.13 ===== */
+(function(){
+  const Q=[
+    {q:"Saat mulai berbicara dengan masyarakat, langkah yang paling tepat adalah...",o:["Langsung menyebut pelanggaran","Sapa, perkenalkan diri, jelaskan maksud, lalu dengarkan","Menaikkan nada agar terlihat tegas"],a:1},
+    {q:"Jika masyarakat keberatan terhadap teguran, petugas sebaiknya...",o:["Mendengarkan dulu lalu menjelaskan kembali maksud secara singkat","Memotong pembicaraan agar tidak melebar","Langsung mengancam tindakan"],a:0},
+    {q:"Jika dasar aturan atau kewenangan belum jelas...",o:["Tetap bertindak berdasarkan perkiraan","Klarifikasi dan koordinasikan terlebih dahulu","Gunakan kebiasaan lama sebagai dasar"],a:1},
+    {q:"Pada situasi yang mulai tegang tetapi masih aman...",o:["Balas dengan suara lebih keras","Redakan percakapan dan gunakan kalimat singkat","Langsung menuduh masyarakat menghambat tugas"],a:1},
+    {q:"SIAP SATPOL PP digunakan sebagai...",o:["SOP baru pengganti aturan resmi","Panduan praktis komunikasi lapangan yang tetap mengikuti SOP dan kewenangan","Aplikasi untuk menentukan sanksi"],a:1}
+  ];
+  const $=id=>document.getElementById(id);let mode="pre";
+  function render(){const f=$("quizForm");if(!f)return;f.innerHTML=Q.map((q,i)=>`<fieldset class="quiz-question-v113"><legend>${i+1}. ${q.q}</legend>${q.o.map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"><span>${String.fromCharCode(65+j)}. ${o}</span></label>`).join("")}</fieldset>`).join("")}
+  function setMode(m){mode=m;document.querySelectorAll(".test-tab").forEach(b=>b.classList.toggle("active",b.dataset.test===m));if($("submitQuiz"))$("submitQuiz").textContent="Simpan Hasil "+(m==="pre"?"Pre-Test":"Post-Test");$("quizResult")?.classList.add("hidden");render()}
+  document.querySelectorAll(".test-tab").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.test)));
+  $("submitQuiz")?.addEventListener("click",()=>{let correct=0,answers=[];for(let i=0;i<Q.length;i++){const x=document.querySelector(`input[name="q${i}"]:checked`);if(!x){alert(`Soal nomor ${i+1} belum dijawab.`);return}const v=Number(x.value);answers.push(v);if(v===Q[i].a)correct++}const score=correct*20;const name=($("participantName")?.value||"").trim()||"Tanpa nama";localStorage.setItem(mode==="pre"?"siap_simple_pre_v113":"siap_simple_post_v113",JSON.stringify({name,score,answers,timestamp:new Date().toISOString()}));$("quizScore").textContent=`${mode==="pre"?"Pre-Test":"Post-Test"}: ${score}/100`;$("quizMessage").textContent=mode==="pre"?"Nilai awal tersimpan. Lanjutkan membaca panduan dan simulasi sebelum post-test.":"Nilai post-test tersimpan. Bandingkan dengan nilai pre-test untuk bahan laporan aktualisasi.";$("quizReview").innerHTML=Q.map((q,i)=>`<p>${answers[i]===q.a?"✓":"×"} Soal ${i+1}</p>`).join("");$("quizResult").classList.remove("hidden")});
+  $("feedbackForm")?.addEventListener("submit",e=>{e.preventDefault();localStorage.setItem("siap_simple_feedback_v113",JSON.stringify({name:($("fbName")?.value||"").trim()||"Tanpa nama",ease:Number($("fbEase")?.value||0),help:Number($("fbHelp")?.value||0),note:($("fbNote")?.value||"").trim(),timestamp:new Date().toISOString()}));$("feedbackSaved")?.classList.remove("hidden")});
+  render();
+})();
+/* ===== END EVALUASI SEDERHANA v1.13 ===== */
+
