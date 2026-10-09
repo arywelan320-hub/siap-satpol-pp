@@ -5430,3 +5430,109 @@ img,video,svg,canvas{
 }
 /* ===== END FINAL INTERAKTIF MOBILE v1.14.4 ===== */
 
+
+/* ===== SERAGAM DASHBOARD v1.14.5 ===== */
+
+/* Semua kartu utama memakai bahasa visual yang sama.
+   Warna kategori cukup lewat garis aksen atas, bukan seluruh badan kartu. */
+.dashboard-v113 .card{
+  background:#FFFFFF !important;
+  color:#173A52 !important;
+  border:1px solid #D8E4EB !important;
+  border-top-width:4px !important;
+  box-shadow:0 5px 15px rgba(18,54,83,.05) !important;
+}
+
+.dashboard-v113 .card-navy{border-top-color:#155C91 !important}
+.dashboard-v113 .card-red{border-top-color:#E64B4B !important}
+.dashboard-v113 .card-blue{border-top-color:#1C7BD1 !important}
+.dashboard-v113 .card-green{border-top-color:#20A168 !important}
+.dashboard-v113 .card-cyan{border-top-color:#1BA6AE !important}
+.dashboard-v113 .card-gold{border-top-color:#D9A800 !important}
+
+/* Hilangkan perlakuan istimewa lama pada kartu 01 dan 03. */
+.dashboard-v113 .card-navy,
+.dashboard-v113 .card-blue,
+.dashboard-v113 .featured-v113{
+  background:#FFFFFF !important;
+}
+
+/* Badge nomor dibuat identik di semua kartu. */
+.dashboard-v113 .card > .card-icon,
+.dashboard-v113 .card-navy > .card-icon,
+.dashboard-v113 .card-blue > .card-icon,
+.dashboard-v113 .card-red > .card-icon,
+.dashboard-v113 .card-green > .card-icon,
+.dashboard-v113 .card-cyan > .card-icon,
+.dashboard-v113 .card-gold > .card-icon{
+  background:#EAF3F8 !important;
+  color:#0D5F8D !important;
+  border:0 !important;
+}
+
+/* Judul, deskripsi, dan panah konsisten. */
+.dashboard-v113 .card > .card-copy b,
+.dashboard-v113 .card-navy > .card-copy b,
+.dashboard-v113 .card-blue > .card-copy b,
+.dashboard-v113 .card-red > .card-copy b,
+.dashboard-v113 .card-green > .card-copy b,
+.dashboard-v113 .card-cyan > .card-copy b,
+.dashboard-v113 .card-gold > .card-copy b{
+  color:#173A52 !important;
+  font-weight:900 !important;
+}
+
+.dashboard-v113 .card > .card-copy small,
+.dashboard-v113 .card-navy > .card-copy small,
+.dashboard-v113 .card-blue > .card-copy small,
+.dashboard-v113 .card-red > .card-copy small,
+.dashboard-v113 .card-green > .card-copy small,
+.dashboard-v113 .card-cyan > .card-copy small,
+.dashboard-v113 .card-gold > .card-copy small{
+  color:#637B89 !important;
+}
+
+.dashboard-v113 .card > .card-arrow,
+.dashboard-v113 .card-navy > .card-arrow,
+.dashboard-v113 .card-blue > .card-arrow,
+.dashboard-v113 .card-red > .card-arrow,
+.dashboard-v113 .card-green > .card-arrow,
+.dashboard-v113 .card-cyan > .card-arrow,
+.dashboard-v113 .card-gold > .card-arrow{
+  color:#0D6A98 !important;
+}
+
+/* Tinggi badan kartu dibuat sama agar baris 2 kolom benar-benar sejajar. */
+.dashboard-v113 .card{
+  grid-template-rows:172px minmax(96px,96px) !important;
+  min-height:272px !important;
+}
+.dashboard-v113 .card > .card-copy{
+  align-self:center !important;
+}
+.dashboard-v113 .card > .card-copy b{
+  margin-bottom:5px !important;
+}
+
+/* Hover sederhana, tanpa mengubah warna badan. */
+.dashboard-v113 .card:hover{
+  transform:translateY(-2px) !important;
+  box-shadow:0 9px 20px rgba(18,54,83,.09) !important;
+}
+
+/* Mobile tetap satu bahasa visual. */
+@media(max-width:700px){
+  .dashboard-v113 .card{
+    grid-template-rows:190px minmax(96px,96px) !important;
+    min-height:290px !important;
+  }
+}
+
+@media(max-width:430px){
+  .dashboard-v113 .card{
+    border-radius:15px !important;
+  }
+}
+
+/* ===== END SERAGAM DASHBOARD v1.14.5 ===== */
+
